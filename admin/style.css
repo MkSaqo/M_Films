@@ -1,0 +1,35 @@
+.desc{
+	display: block;
+	height: 100px;
+	width: 300px;
+	overflow: auto;
+}
+.select,.insert{
+	margin-bottom: 100px;
+	width: 1000px;
+}
+td,th{	
+	text-align:center;
+	padding: 5px;
+}
+.remove{
+	background-color: lightcoral;
+	width: 100px;
+	height: 40px;
+}
+.update{
+	background-color: lightgreen;
+	width: 100px;
+	height: 40px;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+.update input,textarea{
+	width: 300px;
+}
+#desc1{
+	width: 370px;
+	height: 350px;
+}

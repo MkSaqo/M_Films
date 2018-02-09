@@ -1,0 +1,72 @@
+ body{
+background-image: url("nkarner/filmer1_background_image.jpg");
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+/*<!-- _________________________SITE________________________ -->*/
+.site{
+	width: 1300px;
+	margin: auto;
+}
+
+/*__________________________HEADER________________________*/
+.header{
+	padding-right:  10px;
+	background-image: url("nkarner/header-background_imge .jpg") ;
+	border-radius: 50px;
+}
+.header img{
+	border-radius: 50px;
+	float: left;
+	height: 200px;
+}
+.header h1{
+	color: white;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.header p{
+	padding-right: 20px;
+	margin: 0;
+	text-align: right;
+	color: white;
+}
+.header div{
+	clear: both;
+}
+
+
+/*_____________________________FOOTER_____________________*/
+.footer{
+	text-align: center;
+	background-image: url("nkarner/footer_background_image.jpg");
+	background-size: 1300px 200px;
+
+}
+.footer p{
+	margin: 0;
+	color: white;
+}
+
+
+/*___________________________ARTICLE___________________-*/
+article{
+	background-color: white;
+	border-radius: 20px;
+	overflow: auto;
+	display: flex;
+	margin-bottom: 20px;
+}
+.f_left{
+	border-right: 1px solid;
+	width: 20%;
+}
+.f_right{
+	width: 80%;
+}
+.f_left img{
+	border-radius: 20px;
+}
