@@ -4,6 +4,10 @@ background-size: cover;
 background-attachment: fixed;
 
 }
+*{
+font-family: 'PT Mono', monospace;
+
+}
 
 /*<!-- _________________________SITE________________________ -->*/
 .site{
@@ -16,28 +20,22 @@ background-attachment: fixed;
 	padding-right:  10px;
 	background-image: url("nkarner/header-background_imge .jpg") ;
 	border-radius: 50px;
+	background-size: cover;
+	display: flex;
+	flex-flow: row-reverse;
+	padding-bottom: 20px;
+	padding-top:20px;
 }
-.header img{
-	border-radius: 50px;
-	float: left;
+.verjin_filmer{
 	height: 200px;
 }
-.header h1{
-	color: white;
-	padding-right: 20px;
-	text-align: right;
+.verjin_filmer_img{
+	width: 124px;
+	margin-left: 9px;
+	height: 200px;
+	border-radius: 30px;
+	overflow: auto;
 }
-
-.header p{
-	padding-right: 20px;
-	margin: 0;
-	text-align: right;
-	color: white;
-}
-.header div{
-	clear: both;
-}
-
 
 /*_____________________________FOOTER_____________________*/
 .footer{
@@ -50,23 +48,76 @@ background-attachment: fixed;
 	margin: 0;
 	color: white;
 }
-
+a{
+	color: white;
+	text-decoration: none;
+}
 
 /*___________________________ARTICLE___________________-*/
 article{
-	background-color: white;
 	border-radius: 20px;
 	overflow: auto;
-	display: flex;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	background-image: url("nkarner/film_art.jpg");
+
+}
+.inl{
+	margin-left: 400px;
+
+	display: inline-block;
 }
 .f_left{
-	border-right: 1px solid;
-	width: 20%;
+	vertical-align: top;	
+	display: inline-block;
+	width: 19%;
+	text-align: center;	
 }
 .f_right{
+	border-left: 1px solid black;
+	vertical-align: top;	
+	display: inline-block;
+	color: white;
 	width: 80%;
 }
 .f_left img{
 	border-radius: 20px;
+}
+.film_art{
+	border-radius: 20px;
+	overflow: auto;
+	margin-bottom: 20px;
+	background-image: url("nkarner/film_art.jpg");
+}
+.film_verev,.film_nergev{
+	color: white;
+}
+.film_verev_img{
+	display: inline-block;
+	width: 20%;
+}
+.film_verev_h1{
+	width: 79%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+
+.film_table {
+	vertical-align: top;
+	text-align: left;
+	width: 30%;
+	display: inline-block;
+	padding-left: 20px;
+}
+.film_table th,.film_table td{
+	padding-top: 10px;
+
+}
+.film_table th{
+	padding-right: 30px;
+}
+.film_desc{
+	width: 60%;
+	padding-left: 100px;
+	display: inline-block;
 }

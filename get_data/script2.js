@@ -33,9 +33,10 @@ function collectData(innerPage, currURL) {
     var prasmotr = $(".rl-2").eq(5).text();
     var glavni = $(".rl-2").eq(6).text();
     var desc = $("[itemprop='description']").text();
+    var home_img = uploadDir+index1+".jpg";
     // ______________________________________________________________-
     // ______________________________________________________________-
-    var file = fs.createWriteStream(uploadDir + index1 + ".jpg");
+    var file = fs.createWriteStream("../"+home_img);
     var request1 = http.get(files[index1], function (response) {
         response.pipe(file);
     });
@@ -51,7 +52,8 @@ function collectData(innerPage, currURL) {
         "prasmotr": prasmotr,
         "glavni": glavni,
         "desc": desc,
-        "url": currURL
+        "url": currURL,
+        "home_img":home_img
     };
     console.log(index1 + "--------------------------" + name + "-----------------------------------------");
     return pageData;
