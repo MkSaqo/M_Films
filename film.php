@@ -1,4 +1,5 @@
-<?php include "tpl/new.php";
+<?php 
+include "tpl/new.php";
 include "tpl/connect.php";
 $a = $_GET["id"];
 $sql = "SELECT * FROM `kinoner` WHERE `id` = $a ";
@@ -7,19 +8,6 @@ $result = mysqli_fetch_assoc($conn) ;
 include "tpl/var_data.php";
 	
 ?>
-<!--
-$id = $result["id"];
-$name = $result["name"];
-$date = $result["date"];
-$country = $result["country"];
-$genres = $result["genres"];
-$jam = $result["jam"];
-$prasmotr = $result["prasmotr"];
-$glavni = $result["glavni"];
-$desc = $result["desc"];
-$url = $result["url"];
-$home_img = $result["home_img"];
- -->
 	<div class="container">
 		<div class="film_art">
 			<div class="film_verev">

@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.6.6deb5
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 28, 2018 at 07:32 PM
--- Server version: 5.7.21-0ubuntu0.16.04.1
--- PHP Version: 7.0.25-0ubuntu0.16.04.1
+-- Host: localhost:3306
+-- Generation Time: May 01, 2018 at 11:30 PM
+-- Server version: 5.7.22-0ubuntu0.17.10.1
+-- PHP Version: 7.1.15-0ubuntu0.17.10.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `Filmer`
@@ -38,7 +32,6 @@ CREATE TABLE `kinoner` (
   `desc` varchar(1118) COLLATE utf8_unicode_ci NOT NULL,
   `url` varchar(62) COLLATE utf8_unicode_ci NOT NULL,
   `home_img` varchar(18) CHARACTER SET utf8 DEFAULT NULL
-
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -96,6 +89,36 @@ INSERT INTO `kinoner` (`id`, `name`, `date`, `country`, `genres`, `jam`, `prasmo
 (46, 'Дыши ради нас', 2017, 'Великобритания', 'биография, драма, мелодрама', '1 час 58 мин', '           ду', 'Эндрю Гарфилд', 'В основу сюжета художественного фильма «Дыши ради нас» положена биография британца Робина Кавендиша, который внес значительный вклад в защиту людей с ограниченными возможностями, а также в разработку медицинской помощи и различных приспособлений, облегчающих жизнь парализованных пациентов, больных полиомиелитом. Молодой, привлекательный, уверенный в себе парень с прекрасным чувством юмора с легкостью очаровал неприступную красотку Диану, которая стала его женой. За своим единственным Диана готова следовать куда угодно, и даже далекая дикая Африка не пугает ее любящее сердце. Медовый месяц пара проводит в Кении, но счастье длится недолго. Робин заболевает полиомиелитом, что приводит к параличу всего тела. Он даже не в состоянии самостоятельно дышать, поэтому не понимает, как можно жить дальше? Но любовь к Диане и желание увидеть, как растет их ребенок побуждает Робина к жизни, а вместе с этим приходит желание помогать таким же больным людям, как и он, чтобы облегчить их жизнь.  © ГидОнлайн', 'http://gidonline.in/2017/12/dyshi-radi-nas/', 'nkarner/nkar46.jpg'),
 (47, 'Иностранец', 2017, 'Великобритания, Китай, США', 'боевик, драма, криминал', '1 час 53 мин', '           ду', 'Мартин Кэмпбелл', 'В прошлом Нгок Мин Кван пережил Вьетнамскую войну, о которой предпочитает не вспоминать, так как то время было наполнено невероятной жестокостью. Ветеран войны прошел через годы лишения свободы, истязания в стенах тюрьмы, а также личные потери. Но все это не сломило Квана. Он получил второй шанс на нормальную жизнь, когда перебрался в Лондон. Иностранец открыл свой ресторан и начал налаживать жизнь, но террористический акт в центре города лишает Квана любимой дочери. Некогда участник Ирландской Республиканской Армии, а ныне британский чиновник Лиам Хеннесси не в силах помочь убитому горем отцу, который прекрасно осведомлен о его прошлой деятельности. Понимая, что ждать помощи от властей в поиске террористов бессмысленно, Кван начинает самостоятельные поиски убийц дочери. Вот только вскоре мистер Хеннесси очень сильно пожалеет, что не посодействовал в расследовании дела, так как бывший спецагент Кван готов пойти на отчаянные меры дабы отомстить за смерть дочери. © ГидОнлайн', 'http://gidonline.in/2017/11/inostranec-2/', 'nkarner/nkar47.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `fname` text COLLATE utf8_unicode_ci NOT NULL,
+  `lname` text COLLATE utf8_unicode_ci NOT NULL,
+  `year` int(11) NOT NULL,
+  `mouth` text COLLATE utf8_unicode_ci NOT NULL,
+  `day` int(11) NOT NULL,
+  `films` text COLLATE utf8_unicode_ci NOT NULL,
+  `img` text COLLATE utf8_unicode_ci NOT NULL,
+  `gender` text COLLATE utf8_unicode_ci NOT NULL,
+  `email` text COLLATE utf8_unicode_ci NOT NULL,
+  `phone` text COLLATE utf8_unicode_ci NOT NULL,
+  `about` text COLLATE utf8_unicode_ci NOT NULL,
+  `pass` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `fname`, `lname`, `year`, `mouth`, `day`, `films`, `img`, `gender`, `email`, `phone`, `about`, `pass`) VALUES
+(1, 'Sargis', 'Mkrtchyan', 2000, 'Январь', 19, '', 'nkarner/sargis.mkrtchyan1.m@gmail.com.jpg', 'male', 'sargis.mkrtchyan1.m@gmail.com', '37498941429', 'es cnvel em ...... ...... ...', 'a'),
+(2, 'root', 'root', 2018, 'Январь', 1, '', 'nkarner/root.png', 'male', 'root@gmail.com', '1212121212', 'ROOOOOOOOOOOOOOOOOOOT', 'root');
+
 --
 -- Indexes for dumped tables
 --
@@ -107,6 +130,12 @@ ALTER TABLE `kinoner`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -115,6 +144,8 @@ ALTER TABLE `kinoner`
 --
 ALTER TABLE `kinoner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;

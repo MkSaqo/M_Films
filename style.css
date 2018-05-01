@@ -4,6 +4,9 @@ background-size: cover;
 background-attachment: fixed;
 
 }
+pre{
+	background: white;
+}
 *{
 font-family: 'PT Mono', monospace;
 
@@ -37,6 +40,24 @@ font-family: 'PT Mono', monospace;
 	overflow: auto;
 }
 
+/*_____________________________Login_____________________*/
+.Ldiv{
+	width: 300px;
+	margin:auto;
+	height: 200px;
+	background:white;
+	text-align:center;
+}
+.Ldiv #lname, #lpass,#lsubmit{
+	width: 250px;
+	margin-top:20px;
+	/* color: white; */
+	/* background-color:black; */
+	font-size:25px;
+}
+#lsubmit{
+	background:darkcyan;
+}
 /*_____________________________FOOTER_____________________*/
 .footer{
 	text-align: center;
@@ -51,6 +72,10 @@ font-family: 'PT Mono', monospace;
 a{
 	color: white;
 	text-decoration: none;
+}
+.login{
+	float: right;
+	background: red;
 }
 
 /*___________________________ARTICLE___________________-*/

@@ -1,9 +1,30 @@
 <!-- ___________________________FOOTER____________________________ -->
 			<div class="footer">
+				<div class="login">
+					
+				<?php
+					session_start();
+					$href =explode('?',$_SERVER["REQUEST_URI"])[0];
+					if( $href !=  "/m_films/login.php"){
+						?>
+						<form action="login.php" method="get">
+							<?php if($_SESSION['login']){ ?>
+								<input type="submit" name = "logouted"  value="Log Out">							
+							<?php } else { ?>
+								<input type="submit" value="Log In">
+							<?php } ?>
+						</form>
+						<?php
+						if($_GET['logouted']){
+							session_destroy();
+							$_SESSION = [];
+							
+						}
+					}
+				?>
+				</div>
 				<br>
 				<p>© 2017</p>
-				<p>ԹՈՒՄՈ֊ի օգնությամբ</p>
-				<p>Sargis.mkrtchyan.1@tumo.org</p>
 				<p>Սարգիս Մկրտչյան</p>
 				<br>
 			</div>

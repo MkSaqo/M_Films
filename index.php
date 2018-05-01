@@ -1,18 +1,18 @@
-<?php 
-	include "tpl/new.php";
-	include "tpl/connect.php";
-	
-	$sql = "SELECT * FROM `kinoner`";
-	$conn = mysqli_query($db,$sql);
-	$i = 0;
+<?php
+include "tpl/new.php";
+include "tpl/connect.php";
+
+$sql = "SELECT * FROM `kinoner`";
+$conn = mysqli_query($db, $sql);
+$i = 0;
 ?>
 	<div class="container">
 	<?php
-	$i = 0;
-	while(++$i<10){
-		$result = mysqli_fetch_assoc($conn) ;
-		include "tpl/var_data.php";
-	?>
+$i = 0;
+while (++$i < 10) {
+    $result = mysqli_fetch_assoc($conn);
+    include "tpl/var_data.php";
+    ?>
 		<article>
 			<div class="f_left">
 				<a href="film.php?id=<?php echo $id; ?>">
@@ -21,7 +21,7 @@
 			</div>
 			<div class="f_right">
 						<h1 class="inl">
-							<a href="film.php?id=<?php echo $id?>"><?php echo "$name"; ?></a>
+							<a href="film.php?id=<?php echo $id ?>"><?php echo "$name"; ?></a>
 						</h1>
 				<table>
 					<tr>
@@ -46,6 +46,6 @@
 			</div>
 		</article>
 
-		<?php } ?>
+		<?php }?>
 	</div>
-<?php include "tpl/footer.php" ?>
+<?php include "tpl/footer.php"?>
