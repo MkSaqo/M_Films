@@ -1,7 +1,6 @@
 <?php
 include "tpl/new.php";
 include "tpl/connect.php";
-session_start();
 
 if (isset($_POST['login'])) {
     $name = $_POST['name'];
@@ -14,6 +13,10 @@ if (isset($_POST['login'])) {
 }
 if ($_SESSION["login"]) {
     header("Location: index.php");
+}
+if($_GET['logouted']){
+    session_destroy();
+
 }
 ?>
 

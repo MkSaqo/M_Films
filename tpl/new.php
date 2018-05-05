@@ -1,3 +1,7 @@
+<?php 
+include "tpl/functions.php";
+
+?>
 <!DOCTYPE html>
 <html class="html_filmer1">
 	<head>

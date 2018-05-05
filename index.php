@@ -9,7 +9,7 @@ $i = 0;
 	<div class="container">
 	<?php
 $i = 0;
-while (++$i < 10) {
+while ($i++ < 0) {
     $result = mysqli_fetch_assoc($conn);
     include "tpl/var_data.php";
     ?>

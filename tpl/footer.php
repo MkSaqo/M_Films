@@ -1,9 +1,9 @@
 <!-- ___________________________FOOTER____________________________ -->
+			
 			<div class="footer">
 				<div class="login">
 					
 				<?php
-					session_start();
 					$href =explode('?',$_SERVER["REQUEST_URI"])[0];
 					if( $href !=  "/m_films/login.php"){
 						?>
@@ -15,11 +15,7 @@
 							<?php } ?>
 						</form>
 						<?php
-						if($_GET['logouted']){
-							session_destroy();
-							$_SESSION = [];
-							
-						}
+
 					}
 				?>
 				</div>
