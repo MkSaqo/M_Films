@@ -1,5 +1,5 @@
 <!-- ___________________________FOOTER____________________________ -->
-			
+		
 			<div class="footer">
 				<div class="login">
 					
@@ -8,7 +8,7 @@
 					if( $href !=  "/m_films/login.php"){
 						?>
 						<form action="login.php" method="get">
-							<?php if($_SESSION['login']){ ?>
+							<?php if(isset($_SESSION["login"])){ ?>
 								<input type="submit" name = "logouted"  value="Log Out">							
 							<?php } else { ?>
 								<input type="submit" value="Log In">
