@@ -1,4 +1,5 @@
 <?php
+
 include "tpl/new.php";
 include "tpl/connect.php";
 $month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -11,6 +12,7 @@ if (isset($_POST['login'])) {
     if ($r) {
         $_SESSION['login'] = $r["email"];
     }
+    
 }
 if (isset($_SESSION["login"])) {
     header("Location: index.php");
@@ -36,37 +38,49 @@ if(isset($_POST["Rsend"])){
      VALUES ('$rfname','$rlname','$ryear','$rmounth','$rday','','$rimage','$rmale',
      '$rmail','$rphone','$rabout','$rpass')";
 
-    $subject = "Code verification";
+    $subject = "parolt asa ay hambal";
     $message = rand(1000,9999);
-    $headers = 'From: M_Films@gmail.com';
+    $message = "ezi kylox";
+    $headers = 'From: Garik.navoyan@varung.com';
     mail($rmail,$subject,$message,$headers);
     
     // mysqli_query($db,$sql);
 }
-if (isset($_POST['codeSubmit'])){
-    // prepr($rfname);
-    // prepr($rlname);
-    // prepr($rphone);
-    // prepr($rmale);
-    // prepr($rabout);
-    // prepr($rday);
-    // prepr($ryear);
-    // prepr($rmounth);
-    // prepr($maleImg);
-    // prepr($rimage);
-    // prepr($rmail);
-    // prepr($rpass);
-    prepr($_POST);
-}
-if(isset($_POST["Rsend"])){
+if (isset($_POST['login2'])){
+    if($_POST['code']==$_POST['code1']){
 
+    }
+    else{
+        ?>
+    <form class="black" method="post">
+        <input type="number" name="code" >
+        <input type="hidden" name="code1" value="<?php echo $_POST['code1'] ?>" >
+        <input type="hidden" name="email" value="<?php echo $_POST['email'] ?>" >
+        <input type="hidden" name="pass" value="<?php echo $_POST['pass'] ?>" >
+        <input type="submit" name="login2" >
+    </form>
+        <?php 
+    }
+}
+pre($_POST);
+if(isset($_POST["login1"])){
+    $rmail = $_POST['email'];
+    $subject = "Axpers";
+    $message = rand(1000,9999);
+    $message = "Hrayry uti Saqoi enenenenen ";
+
+    $headers = 'From: hrayr412@gmail.com';
+    mail($rmail,$subject,$message,$headers);
     ?>
     <form class="black" method="post">
         <input type="number" name="code" >
-        <input type="submit" name="codeSubmit" >
+        <input type="hidden" name="code1" value="<?php echo $message ?>" >
+        <input type="hidden" name="email" value="<?php echo $rmail ?>" >
+        <input type="hidden" name="pass" value="<?php echo $_POST['pass'] ?>" >
+        <input type="submit" name="login2" >
     </form>
 <?php 
-    // prepr($_POST);
+    // pre($_POST);
 }
 
 ?>
@@ -75,7 +89,7 @@ if(isset($_POST["Rsend"])){
    <div class="cen">
         <div class="Ldiv">
             <form action="" method="post">
-                <input type="text" name="name" id="lname"><br>
+                <input type="text" name="Rmail" id="lname"><br>
                 <input type="password" name="Lpass" id="lpass">
                 <input type="submit" name="login" id="lsubmit" value="Log In">
             </form>

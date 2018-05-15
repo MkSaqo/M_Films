@@ -1,6 +1,6 @@
 <?php
 session_start();
-function prepr($var){
+function pre($var){
     echo "<pre>";
     print_r($var);
     echo "</pre>";

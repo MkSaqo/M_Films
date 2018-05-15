@@ -1,6 +1,10 @@
 <div class="Rdiv">
     <form action="" method="post">
-        <table>
+    <h1>Registration</h1>
+    <?php 
+    if(isset($_POST['login3'])){
+        ?>
+         <table>
             <tr>
                 <th><label for="Rfname">First name:</label></th>
                 <td><input type="text" name="Rfname" id="Rfname" placeholder="Write first name" ><br></td>
@@ -64,6 +68,15 @@
         <?php } else {?>
 
         <input type="submit" name="Rsend" id="Rsubmit" value="send">
-        <?php } ?>
+        <?php }  ?>
+
+        <?php 
+    } else {
+    ?>
+       <input type="text" name="email"><br>
+       <input type="password" name="pass"><br>
+       <input type="submit" value="Send" name="login1" id="Rsubmit">
+
+       <?php } ?>
     </form>
 </div>
