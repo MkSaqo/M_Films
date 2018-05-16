@@ -8,6 +8,7 @@ if (isset($_POST['login'])) {
     $email = $_POST['Rmail'];
     $pass = $_POST['Lpass'];
     $sql = "SELECT * FROM `users` WHERE `email` = '$email' and `pass` = '$pass'";
+    pre($sql);
     $r = mysqli_fetch_assoc(mysqli_query($db, $sql));
     if ($r) {
         $_SESSION['login'] = $r["email"];
@@ -20,67 +21,67 @@ if (isset($_SESSION["login"])) {
 if (isset($_GET['logouted'])) {
     session_destroy();
 }
-if(isset($_POST["Rsend"])){
+if(isset($_POST["end"])){
     $rfname = $_POST["Rfname"];
     $rlname = $_POST["Rlname"];
     $rphone = $_POST["Rphone"];
-    $rmale = $_POST["Rmale"];
     $rabout = $_POST["Rabout"] ? $_POST["Rabout"] : "";
-    $rday = $_POST["Rday"];
-    $ryear = $_POST["Ryear"];
-    $rmounth = $_POST["Rmounth"];
+    $rmale = $_POST["Rmale"];
     $maleImg = $rmale == "male" ? 2 : 1;
     $rimage = $_POST["Rimage"] ? "nkarner/". $_POST["Rimage"] : "nkarner/noimg". $maleImg .".jpg ";
-    $rmail = $_POST["Rmail"];
-    $rpass = $_POST["Rpass"];
+    $rday = $_POST["Rday"];
+    $rmounth = $_POST["Rmounth"];
+    $ryear = $_POST["Ryear"];
+    $rmail = $_COOKIE["rmail"];
+    $rpass = $_COOKIE["pass"];
     $sql =  "INSERT INTO `users`(`fname`, `lname`, `year`, `mouth`, `day`, `films`, `img`,
      `gender`, `email`, `phone`, `about`, `pass`) 
      VALUES ('$rfname','$rlname','$ryear','$rmounth','$rday','','$rimage','$rmale',
      '$rmail','$rphone','$rabout','$rpass')";
 
-    $subject = "parolt asa ay hambal";
-    $message = rand(1000,9999);
-    $message = "ezi kylox";
-    $headers = 'From: Garik.navoyan@varung.com';
+    $subject = "end register";
+    $message = "sucsesful registered";
+    $headers = 'From: M_films@gmail.com';
     mail($rmail,$subject,$message,$headers);
-    
-    // mysqli_query($db,$sql);
+    mysqli_query($db,$sql);
+    $_POST = [];
+    $_COOKIE = [];
+    ?>
+        <h1>EEEEENNNNDDD</h1>
+    <?php
 }
-if (isset($_POST['login2'])){
-    if($_POST['code']==$_POST['code1']){
 
+
+if (isset($_POST['login2'])){
+    if($_POST['code'] && $_POST['code']==$_COOKIE['code']){
+        $_POST = [];
+        $_POST["login3"]="Submit";
+        
     }
     else{
         ?>
     <form class="black" method="post">
         <input type="number" name="code" >
-        <input type="hidden" name="code1" value="<?php echo $_POST['code1'] ?>" >
-        <input type="hidden" name="email" value="<?php echo $_POST['email'] ?>" >
-        <input type="hidden" name="pass" value="<?php echo $_POST['pass'] ?>" >
         <input type="submit" name="login2" >
     </form>
         <?php 
     }
 }
-pre($_POST);
 if(isset($_POST["login1"])){
     $rmail = $_POST['email'];
-    $subject = "Axpers";
+    $subject = "Code verification";
     $message = rand(1000,9999);
-    $message = "Hrayry uti Saqoi enenenenen ";
-
-    $headers = 'From: hrayr412@gmail.com';
+    $headers = 'From: sargis.mkrtchyan1.y@tumo.org';
     mail($rmail,$subject,$message,$headers);
+    setcookie("rmail",$rmail);
+    setcookie("pass",$_POST['pass']);
+    setcookie("code",$message);
     ?>
     <form class="black" method="post">
         <input type="number" name="code" >
-        <input type="hidden" name="code1" value="<?php echo $message ?>" >
-        <input type="hidden" name="email" value="<?php echo $rmail ?>" >
-        <input type="hidden" name="pass" value="<?php echo $_POST['pass'] ?>" >
         <input type="submit" name="login2" >
     </form>
 <?php 
-    // pre($_POST);
 }
 
 ?>

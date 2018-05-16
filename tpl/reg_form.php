@@ -1,22 +1,22 @@
 <div class="Rdiv">
     <form action="" method="post">
     <h1>Registration</h1>
-    <?php 
-    if(isset($_POST['login3'])){
-        ?>
+    <?php
+if (isset($_POST['login3'])) {
+    ?>
          <table>
             <tr>
                 <th><label for="Rfname">First name:</label></th>
-                <td><input type="text" name="Rfname" id="Rfname" placeholder="Write first name" ><br></td>
+                <td><input type="text" name="Rfname" id="Rfname" required placeholder="Write first name" ><br></td>
             </tr>
             <tr>
                 <th><label for="Rlname">Last name:</label></th>
-                <td><input type="text" name="Rlname" id="Rlname" placeholder="Write last name" ><br></td>
+                <td><input type="text" name="Rlname" id="Rlname" required placeholder="Write last name" ><br></td>
             </tr>
-        
+
             <tr>
                 <th><label for="Rphone">Phone number:</label></th>
-                <td><input type="number" name="Rphone" id="Rphone" placeholder="Write Phone number" ><br></td>
+                <td><input type="number" name="Rphone" id="Rphone" required  placeholder="Write Phone number" ><br></td>
             </tr>
             <tr>
                 <th><label for="Rabout">About you:</label></th>
@@ -28,55 +28,42 @@
             </tr>
         </table>
 
-    
+
         <label for="Rmale">Male:</label>
-            <input type="radio" name="Rmale" id="Rmale" value="male" >
+            <input type="radio" name="Rmale" required id="Rmale" value="male" >
         <label for="Rfemale">Female:</label>
-            <input type="radio" name="Rmale" id="Rfemale" value="female" ><br>
+            <input type="radio" name="Rmale" required  id="Rfemale" value="female" ><br>
         <select name="Rday" id="Rday">
             <?php for ($i = 1; $i <= 31; $i++) {?>
                 <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
             <?php }?>
         </select>
         <select name="Rmounth" id="Rmounth">
-            <?php for ($i = 0; $i <count($month); $i++) {?>
+            <?php for ($i = 0; $i < count($month); $i++) {?>
                 <option value="<?php echo $month[$i]; ?>"><?php echo $month[$i]; ?></option>
             <?php }?>
         </select>
         <select name="Ryear" id="Ryear">
-            <?php for ($i = $dateY; $i >=1940; $i--) {?>
+            <?php for ($i = $dateY; $i >= 1940; $i--) {?>
                 <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
             <?php }?>
         </select><br><br>
-
-        <table>
-            <tr>
-                <th> <label for="Rmail">Email:</label></th>
-                <td><input type="email" name="Rmail" id="Rmail" placeholder="Write Email"></td>
-            </tr>
-            <tr>
-                <th><label for="Rpass">Passworld:</label></th>
-                <td><input type="password" name="Rpass" id="Rpass"><br></td>
-            </tr>
-            <tr>
-        
-        </table>
-        
-            
-        <?php if(isset($_POST["Rsend"])){ ?>
-            <input type="submit" name="Rend" id="Rend" value="Register">
-        <?php } else {?>
-
-        <input type="submit" name="Rsend" id="Rsubmit" value="send">
-        <?php }  ?>
-
-        <?php 
-    } else {
+        <input type="submit" name="end" id="Rsubmit" value="Finsih">
+  
+        <?php
+} 
+else if(isset($_POST["end"])){
     ?>
-       <input type="text" name="email"><br>
-       <input type="password" name="pass"><br>
+    <input type="submit" value="Finish" name="login" id="Rsubmit">
+    
+    <?php 
+}
+else {
+    ?>
+       <input type="email" name="email"><br>
+       <input type="password" required name="pass"><br>
        <input type="submit" value="Send" name="login1" id="Rsubmit">
 
-       <?php } ?>
+       <?php }?>
     </form>
 </div>

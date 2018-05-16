@@ -1,10 +1,9 @@
-var request = require('request');
-var cheerio = require('cheerio');
-var fs = require('fs');
-var forEach = require('async-foreach').forEach;
-var https = require('https');
+const request = require('request');
+const cheerio = require('cheerio');
+const fs = require('fs');
+const forEach = require('async-foreach').forEach;
+const https = require('https');
 const download = require('image-downloader')
-var wget = require('node-wget');
 
 var kinoneri_linker = require("./data/kinoneri_linker.json");
 var files = require("./data/nkarneri_linker.json");

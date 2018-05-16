@@ -9,12 +9,9 @@ body{
 	text-align: center;
  }
 pre{
-	background: white;
+	background: black;
 }
-*{
-font-family: 'PT Mono', monospace;
 
-}
 
 /*<!-- _________________________SITE________________________ -->*/
 .site{
@@ -141,41 +138,70 @@ article{
 	border-radius: 20px;
 }
 .film_art{
+	color: white;
 	border-radius: 20px;
 	overflow: auto;
 	margin-bottom: 20px;
 	background-image: url("nkarner/film_art.jpg");
 }
-.film_verev,.film_nergev{
-	color: white;
+.film_right{
+	float: right;
+	width: 30%;
 }
-.film_verev_img{
+.film_left{
+	border-right: 2px solid white;
+	float: left;
 	display: inline-block;
-	width: 20%;
+	width: 69%;
 }
-.film_verev_h1{
-	width: 79%;
+.film_home_img img{
 	display: inline-block;
-	vertical-align: top;
-	text-align: center;
+	width: 200px;
 }
-
-.film_table {
+.film_content{
+	width: 68%;
+	display: inline-block;
+}
+.film_table{
 	vertical-align: top;
 	text-align: left;
-	width: 30%;
 	display: inline-block;
-	padding-left: 20px;
+	width:60%;
 }
-.film_table th,.film_table td{
-	padding-top: 10px;
+.film_glavn{
+	vertical-align: top;
+	display: inline-block;
+	width:30%;
+}
+.film_glavn img{
+	width:110px;
+}
+.film_glavn p {
+	text-align: center;
 
 }
-.film_table th{
-	padding-right: 30px;
-}
-.film_desc{
-	width: 60%;
-	padding-left: 100px;
+.film_glavn div{
+	vertical-align: top;
+	width:43%;
 	display: inline-block;
+	margin-left: 16px;
+}
+#film_glavn_last{
+	margin-left: 32%;
+}
+.film_table h1{
+	text-align: center;
+}
+.film_table a:hover{
+	text-decoration: underline;
+}
+.film_home_img{
+	width: max-content;
+	padding: 20px;
+	display: inline-block;
+}
+.film_trailer iframe{
+	width:90%;
+	height:350px;
+	margin-left: 30px;
 }

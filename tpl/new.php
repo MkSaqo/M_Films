@@ -1,5 +1,6 @@
 <?php 
 include "tpl/functions.php";
+include "tpl/connect.php";
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,6 @@ include "tpl/functions.php";
 			<div class="header">
 				<div class="verjin_filmer">
 				<?php
-					include "tpl/connect.php";
 	
 					$sql = "SELECT * FROM `kinoner`";
 					$conn = mysqli_query($db,$sql);
@@ -33,3 +33,4 @@ include "tpl/functions.php";
 					<?php } ?>
 				</div>
 			</div>
+			
