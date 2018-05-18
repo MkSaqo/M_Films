@@ -17,20 +17,23 @@ include "tpl/connect.php";
 			<!-- ________________________HEADER_________________________ -->
 			<div class="header">
 				<div class="verjin_filmer">
-				<?php
+					<?php
 	
 					$sql = "SELECT * FROM `kinoner`";
 					$conn = mysqli_query($db,$sql);
 					$i = 0;
-					while(++$i<10){
+					while(++$i<8){
 						$result = mysqli_fetch_assoc($conn) ;
 						$id = $result["id"];
 						$home_img = $result["home_img"];
-					?>
+						?>
 					<a href="film.php?id=<?php echo $id; ?>">
 						<img class="verjin_filmer_img" src="<?php echo $home_img; ?>">
 					</a>
 					<?php } ?>
+				</div>
+				<div class="logo">
+					<a href="index.php"><img src="nkarner/logo.jpg" alt=""></a>
 				</div>
 			</div>
 			

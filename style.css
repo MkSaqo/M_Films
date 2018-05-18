@@ -1,7 +1,6 @@
-
 body{
-	background-image: url("nkarner/filmer1_background_image.jpg");
-	background-size: cover;
+	background-image: url("nkarner/0body_back.jpg");
+	/* background-size: cover; */
 	background-attachment: fixed;
 
 }
@@ -22,7 +21,7 @@ pre{
 /*__________________________HEADER________________________*/
 .header{
 	padding-right:  10px;
-	background-image: url("nkarner/header-background_imge .jpg") ;
+	/* background-image: url("nkarner/header-background_imge .jpg") ; */
 	border-radius: 50px;
 	background-size: cover;
 	display: flex;
@@ -30,11 +29,27 @@ pre{
 	padding-bottom: 20px;
 	padding-top:20px;
 }
+.logo img{
+	width:  100%;
+	height: 100%;
+}
+.logo:hover{
+	border: 1px solid red;
+	width: 298px;
+	height: 198px;
+}
+.logo{
+	width: 300px;
+	height: 200px;
+}
 .verjin_filmer{
 	height: 200px;
 }
+.verjin_filmer_img:hover{
+	box-shadow: 10px 10px 10px red;
+}
 .verjin_filmer_img{
-	width: 124px;
+	width: 129px;
 	margin-left: 9px;
 	height: 200px;
 	border-radius: 30px;
@@ -111,10 +126,12 @@ a{
 /*___________________________ARTICLE___________________-*/
 article{
 	border-radius: 20px;
-	overflow: auto;
 	margin-top: 20px;
-	background-image: url("nkarner/film_art.jpg");
+	/* background-image: url("nkarner/film_art.jpg"); */
 
+}
+.container{
+	background: rgba(10,12,122,0.3);
 }
 .inl{
 	margin-left: 400px;
@@ -137,12 +154,15 @@ article{
 .f_left img{
 	border-radius: 20px;
 }
+#cb{
+	clear: both;
+}
 .film_art{
 	color: white;
 	border-radius: 20px;
-	overflow: auto;
+	/* overflow: auto; */
 	margin-bottom: 20px;
-	background-image: url("nkarner/film_art.jpg");
+	/* background-image: url("nkarner/film_art.jpg"); */
 }
 .film_right{
 	float: right;
@@ -159,19 +179,22 @@ article{
 	width: 200px;
 }
 .film_content{
-	width: 68%;
+	width: 65%;
 	display: inline-block;
 }
 .film_table{
 	vertical-align: top;
 	text-align: left;
 	display: inline-block;
-	width:60%;
+	width:65%;
+}
+.film_table td{
+	width: 170px;
 }
 .film_glavn{
 	vertical-align: top;
 	display: inline-block;
-	width:30%;
+	width:34%;
 }
 .film_glavn img{
 	width:110px;
@@ -189,19 +212,47 @@ article{
 #film_glavn_last{
 	margin-left: 32%;
 }
-.film_table h1{
+.film_table h1,.film_glavn h1{
 	text-align: center;
 }
-.film_table a:hover{
-	text-decoration: underline;
+.film_table table{
+	margin: auto;
 }
 .film_home_img{
 	width: max-content;
-	padding: 20px;
+	padding: 20px 0 20px 0;
 	display: inline-block;
 }
 .film_trailer iframe{
-	width:90%;
+	width:100%;
 	height:350px;
-	margin-left: 30px;
+	/* margin-left: 20px; */
+}
+.player{
+	margin-top: 30px;
+	width:90%;
+	margin: auto;
+	height: 300px;
+}
+.plLeft,.plRight{
+	position: relative;
+	top:175px;
+	border:0 solid;
+	height: 50px;
+	background: rgba(0,0,0,0.8);
+	color:white;	
+}
+.plRight{
+	left:90.5%;
+}
+
+/* __________________________________filmRight______________________ */
+.film_r_cat1,.film_r_cat2{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+.film_r_cat1 li,.film_r_cat2 li{
+
+	list-style-type: none;
 }
