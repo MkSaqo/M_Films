@@ -1,11 +1,11 @@
 <?php
-include "tpl/new.php";
-include "tpl/connect.php";
+include "new.php";
+include "connect.php";
 $a = $_GET["id"];
 $sql = "SELECT * FROM `kinoner` WHERE `id` = $a ";
 $conn = mysqli_query($db, $sql);
 $result = mysqli_fetch_assoc($conn);
-include "tpl/var_data.php";
+include "var_data.php";
 ?>
 	<div class="container">
 		<div class="film_art">
@@ -63,10 +63,30 @@ include "tpl/var_data.php";
 								?></td>
 							</tr>
 						</table>	
+						
+					</div>
+					<div class="film_desc">
+						<p><?php echo $desc ?></p>
 					</div>
 					<div class="film_trailer">
 						<iframe src="<?php echo $trailer; ?>" frameborder="0"></iframe>
 					</div>
+				</div>
+				<div class="film_glavn">
+					<h1>Top Billed Cast</h1>
+					<?php $glavnArr = [$glavnin0,$glavnin1,$glavnin2,$glavnin3,$glavnin4] ?>
+					<?php $glavnArr1 = [$glavni0,$glavni1,$glavni2,$glavni3,$glavni4] ?>
+					<?php 
+					for($i = 0;$i<count($glavnArr);$i++){
+						?>
+						<div id = "<?php if($i == count($glavnArr)-1) echo "film_glavn_last"; ?>">
+							<img src="<?php echo $glavnArr[$i]?>" alt="">
+							<p><?php echo $glavnArr1[$i] ?></p>
+							
+						</div>
+						<?php 
+					} ?>
+				</div>
 					<div class="player">
 							<button class="plLeft" onclick="left()">&#10094</button>
 							<button class="plRight" onclick="right()">&#10095</button>
@@ -92,53 +112,9 @@ include "tpl/var_data.php";
 						</script>
 						<img id="playerImg" src="<?php echo $nkar0; ?>" width = "100%" height="100%" alt="">
 					</div>
-				</div>
-				<div class="film_glavn">
-					<h1>Top Billed Cast</h1>
-					<?php $glavnArr = [$glavnin0,$glavnin1,$glavnin2,$glavnin3,$glavnin4] ?>
-					<?php $glavnArr1 = [$glavni0,$glavni1,$glavni2,$glavni3,$glavni4] ?>
-					<?php 
-					for($i = 0;$i<count($glavnArr);$i++){
-						?>
-						<div id = "<?php if($i == count($glavnArr)-1) echo "film_glavn_last"; ?>">
-							<img src="<?php echo $glavnArr[$i]?>" alt="">
-							<p><?php echo $glavnArr1[$i] ?></p>
-							
-						</div>
-						<?php 
-					} ?>
-				</div>
 			</div>
-			<div class="film_right">
-				<div class="film_r_top">
-					<div class="film_r_cat1">
-						<ul>
-							<?php for($i=date("Y");$i>=2000;$i--){
-								?>
-								<a href="cat.php?Y=<?php echo $i?>"><li><?php echo $i; ?></li></a>
-								<?php 
-							} ?>
-						</ul>
-					</div>
-					<div class="film_r_cat2">
-						<?php 
-						$genres = ["Adventure", "Comedy", "Crime", "Drama", "Fantasy", "Historical", "Historical fiction", "Horror", "Magical realism", "Mystery", "Paranoid Fiction", "Philosophical", "Political", "Romance", "Saga", "Satire", "Science fiction", "Slice of Life", "Social", "Speculative", "Thriller", "Urban", "Western"]
-						?>
-						<ul>
-							<?php for($i=0;$i<count($genres);$i++){
-								?>
-								<a href="cat.php?G=<?php echo $genres[$i] ?>"><li><?php echo $genres[$i]; ?></li></a>
-								<?php 
-							} ?>
-						</ul>
-					</div>
-
-				</div>
-				<!-- <div class="film_r_bottom"></div> -->
-			</div>
-			<div id="cb"></div>
+			<?php include "right.php" ;?>
 		</div>
-	</div>
+		
 
-
-<?php include "tpl/footer.php";?>
+<?php include "footer.php";?>

@@ -1,6 +1,6 @@
 body{
 	background-image: url("nkarner/0body_back.jpg");
-	/* background-size: cover; */
+	/* background-image: url("https://i.redd.it/3lxlwac0rfmx.png"); */
 	background-attachment: fixed;
 
 }
@@ -9,9 +9,16 @@ body{
  }
 pre{
 	background: black;
+	color: white;
 }
-
-
+a{
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	color: blue;
+	text-decoration: underline;
+}
 /*<!-- _________________________SITE________________________ -->*/
 .site{
 	width: 1300px;
@@ -90,10 +97,7 @@ pre{
 	margin: 0;
 	color: white;
 }
-a{
-	color: white;
-	text-decoration: none;
-}
+
 .login{
 	float: right;
 	background: red;
@@ -124,51 +128,48 @@ a{
 	top: 54%;
 }
 /*___________________________ARTICLE___________________-*/
-article{
-	border-radius: 20px;
-	margin-top: 20px;
-	/* background-image: url("nkarner/film_art.jpg"); */
 
+article{
+	border-bottom:5px solid azure;	
 }
+article img{
+	width: 200px;
+	
+}
+.index_s_l,.index_s_r{
+	display: inline-block;
+	vertical-align: top;
+}
+.index_s_r{
+	width: 77%;
+}
+.index_s_l{
+	width: min-content;
+}
+.index_s_r h2{
+	text-align: center
+}
+
+
+
 .container{
 	background: rgba(10,12,122,0.3);
 }
-.inl{
-	margin-left: 400px;
 
-	display: inline-block;
-}
-.f_left{
-	vertical-align: top;	
-	display: inline-block;
-	width: 19%;
-	text-align: center;	
-}
-.f_right{
-	border-left: 1px solid black;
-	vertical-align: top;	
-	display: inline-block;
-	color: white;
-	width: 80%;
-}
-.f_left img{
-	border-radius: 20px;
-}
+
 #cb{
 	clear: both;
 }
 .film_art{
 	color: white;
 	border-radius: 20px;
-	/* overflow: auto; */
 	margin-bottom: 20px;
-	/* background-image: url("nkarner/film_art.jpg"); */
 }
-.film_right{
+.right{
 	float: right;
 	width: 30%;
 }
-.film_left{
+.film_left,.index_left{
 	border-right: 2px solid white;
 	float: left;
 	display: inline-block;
@@ -218,6 +219,10 @@ article{
 .film_table table{
 	margin: auto;
 }
+.film_desc p {
+	text-align: justify;
+	padding: 0 20px 0 20px;
+}
 .film_home_img{
 	width: max-content;
 	padding: 20px 0 20px 0;
@@ -230,7 +235,7 @@ article{
 }
 .player{
 	margin-top: 30px;
-	width:90%;
+	width:60%;
 	margin: auto;
 	height: 300px;
 }
@@ -255,4 +260,62 @@ article{
 .film_r_cat1 li,.film_r_cat2 li{
 
 	list-style-type: none;
+}
+.film_r_cat2 ul{
+	margin: 15px;
+	padding: 0;
+}
+.film_r_cat2 span,.film_r_cat1 span{
+	float: right;
+}
+.film_r_cat1 span{
+	margin-right: 70px;
+}
+.film_r_cat1 td{
+	width: 70px;
+}
+.film_r_bottom div{
+	width: 45%;
+	/* height: 200px; */
+	/* border: 8px solid; */
+	display: inline-block;
+	text-align: center;
+}
+.film_r_bottom p{
+	margin: 0 0 10px 0 ;
+
+}
+.film_r_bottom img{
+	border-radius: 50px;
+	width: 130px;
+	height: 180px;
+}
+
+.r_search input {
+	box-sizing: border-box;
+	vertical-align: top;
+}
+
+
+.r_search .search {
+	margin-left: 40px;
+	margin-top: 10px;
+	padding: 0 30px;
+	font-size: 15px;
+	width: 60%;
+	height: 40px;
+	border-radius: 20px 0 0 20px;
+}
+
+.r_search .submit {
+	margin-top: 10px;
+	cursor: pointer;
+	border: none;
+	background: url('http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png') no-repeat center center, #1E1E20;
+	background-size: 30px 30px;
+	border-radius: 0 20px 20px 0;
+	padding: 15px 25px;
+	display: inline-block;
+	width: 70px;
+	height: 40px;
 }
