@@ -141,16 +141,57 @@ article img{
 	vertical-align: top;
 }
 .index_s_r{
-	width: 77%;
+	padding-left: 40px;
+	width: 72%;
+	color: white;
 }
+
 .index_s_l{
 	width: min-content;
+	margin-top: -18px;
+}
+
+.play{
+	z-index: -1;
+	position: relative;
+    top: 100px;
+    width: 60px;
+    margin-bottom: -75px;
+    left: 70px;
+}
+.pages p{
+	text-align: center;
 }
 .index_s_r h2{
 	text-align: center
 }
+.index_s_r p {
+	margin:6px 0 6px 0;
+}
+.index_s_r_2,.index_s_r_1{
+	width: 49.5%;
+	display: inline-block;
+	vertical-align: top;
+}
+.index_desc{
+	padding-right: 50px;
+	text-align: justify;
+	margin-top: 20px;
+}
+.watch{
+	padding: 10px;
+	margin-top: -18px;
+	margin-right: 18px;
+	float: right;
+	border-radius: 100px;
+	letter-spacing: 4px;
+	cursor: pointer;
+	background: #2D2F33;
+}
 
-
+.watch:active {
+	transform: translateY(3px);
+}
 
 .container{
 	background: rgba(10,12,122,0.3);
@@ -166,13 +207,12 @@ article img{
 	margin-bottom: 20px;
 }
 .right{
+	border-left: 2px solid white;
 	float: right;
 	width: 30%;
 }
-.film_left,.index_left{
-	border-right: 2px solid white;
+.film_left,.index_left,.search{
 	float: left;
-	display: inline-block;
 	width: 69%;
 }
 .film_home_img img{
@@ -318,4 +358,10 @@ article img{
 	display: inline-block;
 	width: 70px;
 	height: 40px;
+}
+
+/* ______________________________SEARCH______________________________ */
+.search h2{
+	color: white;
+	text-align:center;
 }

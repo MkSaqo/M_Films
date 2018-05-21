@@ -4,16 +4,29 @@ include "connect.php";
 
 $i = 0;
 $f = 0;
-$filmCount = 7;
-if(isset($_GET['page'])){
-	$page = $_GET['page'];
+$filmCount = 2;
+if(isset($_GET["page"])){
+   $page= $_GET["page"];
 }
 else{
-	$page=1;
+    $page= 1;
+
 }
-$sql1 = "SELECT COUNT(`id`) FROM `kinoner`";
+if(isset($_GET['Y'])){
+    $pageY = $_GET['Y'];
+    $limit1=$page*$filmCount-$filmCount;
+    $limit2=$page*$filmCount;
+    $sql = "SELECT * FROM `kinoner` WHERE `relase` LIKE '%$pageY%'  LIMIT $limit1,$limit2";
+    $sql1 = "SELECT COUNT(`id`) FROM `kinoner`  WHERE `relase` LIKE '%$pageY%'";
+}
+else if(isset($_GET['G'])){
+    $limit1=$page*$filmCount-$filmCount;
+    $limit2=$page*$filmCount;
+    $pageG = $_GET['G'];
+    $sql = "SELECT * FROM `kinoner` WHERE `genres` LIKE '%$pageG%'  LIMIT $limit1,$limit2";
+    $sql1 = "SELECT COUNT(`id`) FROM `kinoner`  WHERE `genres` LIKE '%$pageG%'";
+}
 $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
-$sql = "SELECT * FROM `kinoner` WHERE `id` >=$page*$filmCount-$filmCount";
 $conn = mysqli_query($db, $sql);
 
 ?>
@@ -58,9 +71,20 @@ $conn = mysqli_query($db, $sql);
 							if($descArr[1]){?>
 							
 								<p><b><?php echo $descArr[0]."</b> : ". $descArr[1]; ?></p>
-							<?php }
-						} ?>
-
+                                <?php }
+                        } 
+                        $genres = explode(",",$genres);
+                        ?>
+                        <p><b>Genres : </b> <?php
+                        for($i = 0;$i<count($genres);$i++){
+                        ?>
+                            <a href="genre.php?genre=<?php echo($genres[$i]); ?>"><?php echo($genres[$i]);
+                            if($i != count($genres)-1) echo ",";
+                            ?></a>
+                    
+                    <?php 
+                        }?>
+                        </p>
 							
 						</div>
 						<div class="index_s_r_2">
@@ -68,7 +92,7 @@ $conn = mysqli_query($db, $sql);
 							<p><b>Time </b> : <?php echo $time; ?></p> 
 							<p><b>Budget </b> : <?php echo $budget; ?></p> 
 							<p><b>Revenue </b> : <?php echo $revenue; ?></p> 
-							<p><b>Language </b> : <?php echo $lang; ?></p>
+							<p><b>Year</b> : <?php echo(explode(" ",$relase)[2]); ?></p>
 						</div>
 						<div class="index_desc">
 							<p><b>Description : </b><?php echo substr($desc,0,200); ?><a href="film.php?id=<?php echo $id;?>">.....</a>
@@ -84,9 +108,17 @@ $conn = mysqli_query($db, $sql);
 			
 			<div class="pages">
 				<p><?php
-				for($i = 1;$i<=ceil($conCount/$filmCount);$i++){?>	
-					<a href="?page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
-				<?php }?>
+                for($i = 1;$i<=ceil($conCount/$filmCount);$i++){
+                    ?>
+                    <a href="
+                    <?php if(isset($pageG)){?>
+                    ?G=<?php echo $pageG;
+                    }else{?>
+                    ?Y=<?php echo $pageY;
+                    }
+                    ?>&page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
+                
+                <?php }?>
 				</p>
 			</div>
 		</div>

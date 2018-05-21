@@ -1,8 +1,14 @@
 <div class="right">
 				<div class="r_search">
 					<form action="search.php" method="get">
-						<input class="search" type="text" id="search" name="m" />
-						<input class="submit" type="submit" value=" " name="search" />
+						<input class="search"
+						<?php if(isset($_GET['q'])){
+							?>
+							value="<?php echo $_GET['q']?>"
+							<?php 
+						} ?>
+						type="text" id="search" name="q" />
+						<input class="submit" type="submit" value=" " />
 					</form>
 				</div>
 				<div class="film_r_top">
@@ -27,7 +33,7 @@
 						?>
 						<ul>
 							<?php for($i=0;$i<count($genres1);$i++){
-									$sql = "SELECT `relase` FROM `kinoner` WHERE `relase` LIKE '%$i%'";
+									$sql = "SELECT `genres` FROM `kinoner` WHERE `genres` LIKE '%$genres1[$i]%'";
 									$data = mysqli_query($db,$sql);
 									$l=0;
 									while($r = mysqli_fetch_assoc($data)){

@@ -45,6 +45,10 @@ include "var_data.php";
 								<td>: <?php echo $revenue; ?></td>
 							</tr>
 							<tr> 
+								<th>Year </th>
+								<td>: <?php echo(explode(" ",$relase)[2]); ?></td>
+							</tr>
+							<tr> 
 								<th>Language </th>
 								<td>: <?php echo $lang; ?></td>
 							</tr>
