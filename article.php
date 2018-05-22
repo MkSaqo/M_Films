@@ -1,33 +1,6 @@
-<?php
-include "new.php";
-include "connect.php";
-
-$i = 0;
-$f = 0;
-$filmCount = 7;
-if(isset($_GET['page'])){
-	$page = $_GET['page'];
-}
-else{
-	$page=1;
-}
-$sql1 = "SELECT COUNT(`id`) FROM `kinoner`";
-$conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
-$sql = "SELECT * FROM `kinoner` WHERE `id` >=$page*$filmCount-$filmCount";
-$conn = mysqli_query($db, $sql);
-
-?>
-
-	<div class="container">
-		<div class="index_left">
-			<?php
-		while ($f++ < $filmCount) {	
-			if($result = mysqli_fetch_assoc($conn)){
-				include "var_data.php";
-				?>
-				<article>
+<article>
 					<div class="index_s_l"  onmouseover="a(<?php echo $f-1?>)" onmouseout="b(<?php echo $f-1?>)">
-						<a href=film.php?id="<?php echo $id;?>">
+						<a href="film.php?id=<?php echo $id;?>">
 							<img class="play" src="nkarner/play.png" alt="">
 						</a>
 						<img  class="home" src="<?php echo $home_img ?>" alt="">
@@ -58,38 +31,34 @@ $conn = mysqli_query($db, $sql);
 							if($descArr[1]){?>
 							
 								<p><b><?php echo $descArr[0]."</b> : ". $descArr[1]; ?></p>
-							<?php }
-						} ?>
-
+                                <?php }
+                        } 
+                        $genres = explode(",",$genres);
+                        ?>
+                        <p><b>Genres : </b> <?php
+                        for($i = 0;$i<count($genres);$i++){
+                        ?>
+                            <a href="cat.php?G=<?php echo $genres[$i]; ?>"><?php echo($genres[$i]);
+                            if($i != count($genres)-1) echo ",";
+                            ?></a>
+                    
+                    <?php 
+                        }?>
+                        </p>
 							
 						</div>
 						<div class="index_s_r_2">
+						<?php $year = explode(" ",$relase)[2]; ?>
 							<p><b>Status </b> : <?php echo $status; ?></p> 
 							<p><b>Time </b> : <?php echo $time; ?></p> 
 							<p><b>Budget </b> : <?php echo $budget; ?></p> 
 							<p><b>Revenue </b> : <?php echo $revenue; ?></p> 
-							<p><b>Language </b> : <?php echo $lang; ?></p>
+							<p><b>Year</b> : <a href="cat.php?Y=<?php echo $year;?>"><?php echo $year; ?></p></a>
 						</div>
 						<div class="index_desc">
 							<p><b>Description : </b><?php echo substr($desc,0,200); ?><a href="film.php?id=<?php echo $id;?>">.....</a>
 						
 						</p>
 					</div>
-					<div class="watch">Watch Now</div>
-
-					</div>
+					<a id="watch" href="film.php?id=<?php echo $id;?>"><div class="watch">Watch Now</div></a>
 				</article>
-
-			<?php }}?>
-			
-			<div class="pages">
-				<p><?php
-				for($i = 1;$i<=ceil($conCount/$filmCount);$i++){?>	
-					<a href="?page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
-				<?php }?>
-				</p>
-			</div>
-		</div>
-		<?php include "right.php" ;?>
-	
-<?php include "footer.php"?>

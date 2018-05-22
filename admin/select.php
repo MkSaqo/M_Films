@@ -28,7 +28,7 @@ $dbsql = mysqli_query($db,$sql);
 			<td class="desc"><?php echo $result['desc'] ?></td>
 			<td>
 				<button class="remove">
-					<a href="index.php?action=remove&id=<?php echo $result['id'] ?>">Dellete</a>
+					<a href="home.php?action=remove&id=<?php echo $result['id'] ?>">Dellete</a>
 				</button>
 	
 				<button class="update">

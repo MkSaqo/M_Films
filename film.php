@@ -6,7 +6,9 @@ $sql = "SELECT * FROM `kinoner` WHERE `id` = $a ";
 $conn = mysqli_query($db, $sql);
 $result = mysqli_fetch_assoc($conn);
 include "var_data.php";
+
 ?>
+
 	<div class="container">
 		<div class="film_art">
 			<div class="film_left">
@@ -46,7 +48,9 @@ include "var_data.php";
 							</tr>
 							<tr> 
 								<th>Year </th>
-								<td>: <?php echo(explode(" ",$relase)[2]); ?></td>
+								<td>: <?php 
+								$y = explode(" ",$relase);
+								echo $y[0]." ".$y[1].$y[2] ; ?></td>
 							</tr>
 							<tr> 
 								<th>Language </th>

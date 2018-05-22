@@ -33,7 +33,7 @@ include "connect.php";
 					<?php } ?>
 				</div>
 				<div class="logo">
-					<a href="index.php"><img src="nkarner/logo.jpg" alt=""></a>
+					<a href="home.php"><img src="nkarner/logo.jpg" alt=""></a>
 				</div>
 			</div>
 			
