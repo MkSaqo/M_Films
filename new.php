@@ -27,10 +27,28 @@ include "connect.php";
 						$id = $result["id"];
 						$home_img = $result["home_img"];
 						?>
-					<a href="film.php?id=<?php echo $id; ?>">
+					<div class="header_img"  onmouseover="a1(<?php echo $i-1?>)" onmouseout="b1(<?php echo $i-1?>)">
 						<img class="verjin_filmer_img" src="<?php echo $home_img; ?>">
-					</a>
+						<a href="film.php?id=<?php echo $id; ?>">
+							<img class="header_play" src="nkarner/play.png">
+						</a>
+					</div>
 					<?php } ?>
+					<script>
+						function a1(a){
+							var play =  document.getElementsByClassName("header_play");
+							var home =  document.getElementsByClassName("verjin_filmer_img");
+							play[a].style.zIndex = 1;
+							home[a].style.opacity = 0.5;
+						}
+						function b1(a){
+							var play =  document.getElementsByClassName("header_play");
+							var home =  document.getElementsByClassName("verjin_filmer_img");
+							play[a].style.zIndex = -1;
+							home[a].style.opacity = 1;
+						}
+
+					</script>
 				</div>
 				<div class="logo">
 					<a href="home.php"><img src="nkarner/logo.jpg" alt=""></a>

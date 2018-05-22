@@ -114,7 +114,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `fname`, `lname`, `year`, `mouth`, `day`, `films`, `img`, `gender`, `email`, `phone`, `about`, `pass`) VALUES
 (1, 'Sargis', 'Mkrtchyan', 2000, 'Январь', 19, '', 'nkarner/sargis.mkrtchyan1.m@gmail.com.jpg', 'male', 'sargis.mkrtchyan1.m@gmail.com', '37498941429', 'es cnvel em ...... ...... ...', 'a'),
 (2, 'root', 'root', 2018, 'Январь', 1, '', 'nkarner/root.png', 'male', 'root', '1212121212', 'ROOOOOOOOOOOOOOOOOOOT', 'root'),
-(7, 'Sargis', 'Mkrtchyan', 2000, 'Январь', 19, '', 'nkarner/sargis.mkrtchyan1.m@gmail.com.jpg', 'male', 'sargis.mkrtchyan1.m@gmail.com', '37498941429', 'es cnvel em ...... ...... ...', 'a');
+(3, 'Sargis', 'Mkrtchyan', 2000, 'Январь', 19, '', 'nkarner/sargis.mkrtchyan1.m@gmail.com.jpg', 'male', 'sargis.mkrtchyan1.m@gmail.com', '37498941429', 'es cnvel em ...... ...... ...', 'a');
 
 --
 -- Indexes for dumped tables

@@ -4,7 +4,7 @@ include "connect.php";
 
 $i = 0;
 $f = 0;
-$filmCount = 2;
+$filmCount = 6;
 if(isset($_GET["page"])){
    $page= $_GET["page"];
 }
@@ -34,30 +34,31 @@ $conn = mysqli_query($db, $sql);
 	<div class="container">
 		<div class="index_left">
 			<?php
-		while ($f++ < $filmCount) {	
-			if($result = mysqli_fetch_assoc($conn)){
-				include "var_data.php";
-				include "article.php";
-				?>
-				
-			<?php }}?>
-			
-			<div class="pages">
-				<p><?php
-                for($i = 1;$i<=ceil($conCount/$filmCount);$i++){
-                    ?>
-                    <a href="
-                    <?php if(isset($pageG)){?>
-                    ?G=<?php echo $pageG;
-                    }else{?>
-                    ?Y=<?php echo $pageY;
-                    }
-                    ?>&page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
-                
-                <?php }?>
-				</p>
-			</div>
-		</div>
-		<?php include "right.php" ;?>
-	
+            if(isset($pageG) || isset($pageY)){
+                while ($f++ < $filmCount) {	
+                    if($result = mysqli_fetch_assoc($conn)){
+                        include "var_data.php";
+                        include "article.php";
+                        ?>
+                        
+                <?php }}}else{ ?>
+                <h2>No selected category</h2>
+                <?php } ?>
+        <div class="pages">
+            <p><?php
+            for($i = 1;$i<=ceil($conCount/$filmCount);$i++){
+                ?>
+                <a href="
+                <?php if(isset($pageG)){?>
+                ?G=<?php echo $pageG;
+                }else{?>
+                ?Y=<?php echo $pageY;
+                }
+                ?>&page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
+            
+            <?php }?>
+            </p>
+        </div>
+    </div>
+<?php include "right.php" ;?>
 <?php include "footer.php"?>

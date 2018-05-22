@@ -70,12 +70,18 @@
 										$arr[]=$r["id"];
 										$i++;
 										?>
-										<div>
-										<a href="film.php?id=<?php echo $r["id"];?>">
-												<img src="<?php echo $r['home_img'] ?>" alt="">
+										<div class="qh">
+											<div class="right_img"  onmouseover="a2(<?php echo $i-1?>)" onmouseout="b2(<?php echo $i-1?>)">
+												<img class="right_imgs" src="<?php echo $r['home_img']; ?>">
+												<a href="film.php?id=<?php echo $r['id']; ?>">
+													<img class="right_play" src="nkarner/play.png">
+												</a>
+											</div>
+											<a href="film.php?id=<?php echo $r["id"];?>">
 												<p><?php echo $r['name'] ?></p>
 											</a>
 										</div>
+										
 										<?php 
 									}
 								}
@@ -96,17 +102,37 @@
 					if($bool){
 						$i++;
 						?>
-						<div>
-						<a href="film.php?id=<?php echo $r["id"];?>">
-								<img src="<?php echo $r['home_img'] ?>" alt="">
+						<div class="qh">
+							<div class="right_img"  onmouseover="a2(<?php echo $i-1?>)" onmouseout="b2(<?php echo $i-1?>)">
+								<img class="right_imgs" src="<?php echo $r['home_img']; ?>">
+								<a href="film.php?id=<?php echo $r['id']; ?>">
+									<img class="right_play" src="nkarner/play.png">
+								</a>
+							</div>
+							<a href="film.php?id=<?php echo $r["id"];?>">
 								<p><?php echo $r['name'] ?></p>
 							</a>
 						</div>
 						<?php 
 					}
 				}
-					?>
+				?>
 				</div>
 			</div>
 			<div id="cb"></div>
 		</div>
+<script>
+	function a2(a){
+		var play =  document.getElementsByClassName("right_play");
+		var home =  document.getElementsByClassName("right_imgs");
+		play[a].style.zIndex = 1;
+		home[a].style.opacity = 0.5;
+	}
+	function b2(a){
+		var play =  document.getElementsByClassName("right_play");
+		var home =  document.getElementsByClassName("right_imgs");
+		play[a].style.zIndex = -1;
+		home[a].style.opacity = 1;
+	}
+
+</script>

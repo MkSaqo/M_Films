@@ -4,7 +4,7 @@ include "connect.php";
 
 $i = 0;
 $f = 0;
-$filmCount = 7;
+$filmCount = 6;
 if(isset($_GET['page'])){
 	$page = $_GET['page'];
 }
@@ -38,6 +38,5 @@ $conn = mysqli_query($db, $sql);
 				</p>
 			</div>
 		</div>
-		<?php include "right.php" ;?>
-	
+<?php include "right.php" ;?>
 <?php include "footer.php"?>

@@ -3,7 +3,7 @@ include "new.php";
 include "connect.php";
 $i = 0;
 $f = 0;
-$filmCount = 3;
+$filmCount = 6;
 if(isset($_GET['q'])){
 	$q = $_GET['q'];
 }
@@ -48,26 +48,19 @@ $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(*)"];
 			}else{
 				?>
 				<h2>No result for <?php echo $q;break; ?></h2>
-				<?php 
-			}
-			}
-		?>
+				<?php }}?>
 			
 		<div class="pages">
-				<p><?php
-				for($i = 1;$i<=ceil($conCount/$filmCount);$i++){?>	
-					<a href="?q=<?php echo $q;?>&page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
-				<?php }?>
-				</p>
-			</div>
-		<?php }
-		else{
-			?>
-			<h2>Minimum length is 3 </h2>
-			<?php 
-		}
-		?>
+			<p><?php
+			for($i = 1;$i<=ceil($conCount/$filmCount);$i++){?>	
+				<a href="?q=<?php echo $q;?>&page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
+			<?php }?>
+			</p>
 		</div>
-	<?php include "right.php" ;?>
-	
+		<?php }else{?>
+			<h2>Minimum length is 3 </h2>
+		<?php }?>
+		</div>
+		
+<?php include "right.php" ;?>
 <?php include "footer.php"?>
