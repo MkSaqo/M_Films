@@ -1,4 +1,4 @@
-<article>
+<article class="art_spisk">
 	<div class="index_s_l"  onmouseover="a(<?php echo $f-1?>)" onmouseout="b(<?php echo $f-1?>)">
 		<a href="film.php?id=<?php echo $id;?>">
 			<img class="play" src="nkarner/play.png" alt="">
@@ -6,21 +6,7 @@
 		<img  class="home" src="<?php echo $home_img ?>" alt="">
 		
 	</div>
-	<script>
-		function a(a){
-			var play =  document.getElementsByClassName("play");
-			var home =  document.getElementsByClassName("home");
-			play[a].style.zIndex = 1;
-			home[a].style.opacity = 0.5;
-		}
-		function b(a){
-			var play =  document.getElementsByClassName("play");
-			var home =  document.getElementsByClassName("home");
-			play[a].style.zIndex = -1;
-			home[a].style.opacity = 1;
-		}
-
-	</script>
+	
 	<div class="index_s_r">
 		<h2><?php echo $name; ?></h2>
 		<div class="index_s_r_1">
@@ -60,5 +46,7 @@
 		
 		</p>
 	</div>
+	</div>
 	<a id="watch" href="film.php?id=<?php echo $id;?>"><div class="watch">Watch Now</div></a>
+	<div class="none"><a href="film.php?id=<?php echo $id ?>"><h2><?php echo $name; ?></h2></a></div>
 </article>

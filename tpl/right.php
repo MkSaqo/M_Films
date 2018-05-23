@@ -121,18 +121,3 @@
 			</div>
 			<div id="cb"></div>
 		</div>
-<script>
-	function a2(a){
-		var play =  document.getElementsByClassName("right_play");
-		var home =  document.getElementsByClassName("right_imgs");
-		play[a].style.zIndex = 1;
-		home[a].style.opacity = 0.5;
-	}
-	function b2(a){
-		var play =  document.getElementsByClassName("right_play");
-		var home =  document.getElementsByClassName("right_imgs");
-		play[a].style.zIndex = -1;
-		home[a].style.opacity = 1;
-	}
-
-</script>

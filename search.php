@@ -32,6 +32,11 @@ $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(*)"];
 
 	<div class="container">
 		<div class="search">
+			<div class="change_js">
+				<div class="icon_gallery" onclick="gallery()"></div>
+				<div class="icon_spisk" onclick="spisk()"></div>
+				
+			</div>
 		<?php
 		if(strlen($q)>2){
 			$bool=false;

@@ -33,6 +33,11 @@ $conn = mysqli_query($db, $sql);
 
 	<div class="container">
 		<div class="index_left">
+            <div class="change_js">
+				<div class="icon_gallery" onclick="gallery()"></div>
+				<div class="icon_spisk" onclick="spisk()"></div>
+				
+			</div>
 			<?php
             if(isset($pageG) || isset($pageY)){
                 while ($f++ < $filmCount) {	

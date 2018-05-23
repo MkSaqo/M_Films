@@ -139,34 +139,80 @@ a:hover{
 }
 /*___________________________ARTICLE___________________-*/
 
-article{
+.art_spisk{
+	padding-bottom: 24px;
 	border-bottom:5px solid azure;	
 }
-article img{
-	width: 200px;
-	
+.art_spisk img{
+	width: 200px;	
 }
-.index_s_l,.index_s_r{
+.art_gallery img{
+	width: 250px;	
+
+}
+.art_gallery .watch{
+	display: none;
+}
+.art_spisk .index_s_l,.index_s_r{
 	display: inline-block;
 	vertical-align: top;
 }
-.index_s_r{
+.art_spisk .index_s_r{
 	padding-left: 40px;
 	width: 72%;
 	color: white;
 }
-
-.index_s_l{
+.art_gallery h2{
+	margin: 8px;
+}
+.art_spisk .index_s_l{
 	width: min-content;
 	position: relative;
 }
-
-.play{
+.art_spisk .none{
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+.art_gallery{
+	position: relative;
+	margin-left: 35px;
+	display: inline-block;
+}
+.art_gallery .index_s_r{
+	display: none;
+}
+.icon_spisk,.icon_gallery{
+	width: 30px;
+	height: 30px;
+	background-size: cover;
+	margin-left: 10px;
+}
+.change_js{
+	/* height: 0; */
+	display: flex;
+    justify-content: flex-end;
+}
+.icon_gallery{
+	background-image: url("nkarner/gallery.png");	
+}
+.icon_spisk{
+	height: 40px;
+	background-image: url("nkarner/spisk.png");
+}
+.art_spisk .play{
 	z-index: -1;
 	position: absolute;
     top: 100px;
     width: 60px;
     left: 70px;
+}
+.art_gallery .play{
+	z-index: -1;
+	position: absolute;
+    top: 145px;
+    width: 60px;
+    left: 98px;
 }
 .pages p{
 	text-align: center;
@@ -187,7 +233,7 @@ article img{
 	text-align: justify;
 	margin-top: 20px;
 }
-.watch{
+.art_spisk .watch{
 	padding: 10px;
 	margin-top: -18px;
 	margin-bottom: 8px;
@@ -396,6 +442,7 @@ article img{
 
 /* ______________________________SEARCH______________________________ */
 .search h2,.index_left h2{
+	
 	color: white;
 	text-align:center;
 }

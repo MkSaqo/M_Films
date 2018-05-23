@@ -20,6 +20,11 @@ $conn = mysqli_query($db, $sql);
 
 	<div class="container">
 		<div class="index_left">
+			<div class="change_js">
+				<div class="icon_gallery" onclick="gallery()"></div>
+				<div class="icon_spisk" onclick="spisk()"></div>
+				
+			</div>
 			<?php
 		while ($f++ < $filmCount) {	
 			if($result = mysqli_fetch_assoc($conn)){
@@ -36,7 +41,7 @@ $conn = mysqli_query($db, $sql);
 					<a href="?page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
 				<?php }?>
 				</p>
-			</div>
+			</div>	
 		</div>
 <?php include "tpl/right.php" ;?>
 <?php include "tpl/footer.php"?>

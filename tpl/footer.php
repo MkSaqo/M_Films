@@ -25,5 +25,61 @@
 				<br>
 			</div>
 		</div><!-- __________________STTE_DIV__END___ ____________________-->
+		<script>
+		function a2(a){
+			var play =  document.getElementsByClassName("right_play");
+			var home =  document.getElementsByClassName("right_imgs");
+			play[a].style.zIndex = 1;
+			home[a].style.opacity = 0.5;
+		}
+		function b2(a){
+			var play =  document.getElementsByClassName("right_play");
+			var home =  document.getElementsByClassName("right_imgs");
+			play[a].style.zIndex = -1;
+			home[a].style.opacity = 1;
+		}
+		function a1(a){
+			var play =  document.getElementsByClassName("header_play");
+			var home =  document.getElementsByClassName("verjin_filmer_img");
+			play[a].style.zIndex = 1;
+			home[a].style.opacity = 0.5;
+		}
+		function b1(a){
+			var play =  document.getElementsByClassName("header_play");
+			var home =  document.getElementsByClassName("verjin_filmer_img");
+			play[a].style.zIndex = -1;
+			home[a].style.opacity = 1;
+		}
+
+		function gallery(){
+			var spisk = document.getElementsByClassName("art_spisk");
+			var i = 0;
+			while(i<spisk.length){
+				spisk[0].className ="art_gallery";
+			}
+			
+		}
+		function spisk(){
+			var gallery = document.getElementsByClassName("art_gallery");
+			var i = 0;
+			while(i<gallery.length){
+				gallery[0].className ="art_spisk";
+			}
+			
+		}
+		function a(a){
+			var play =  document.getElementsByClassName("play");
+			var home =  document.getElementsByClassName("home");
+			play[a].style.zIndex = 1;
+			home[a].style.opacity = 0.5;
+		}
+		function b(a){
+			var play =  document.getElementsByClassName("play");
+			var home =  document.getElementsByClassName("home");
+			play[a].style.zIndex = -1;
+			home[a].style.opacity = 1;
+		}
+
+	</script>
 	</body>
 </html>

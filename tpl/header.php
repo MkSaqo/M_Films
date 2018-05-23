@@ -34,21 +34,6 @@ include "tpl/connect.php";
 						</a>
 					</div>
 					<?php } ?>
-					<script>
-						function a1(a){
-							var play =  document.getElementsByClassName("header_play");
-							var home =  document.getElementsByClassName("verjin_filmer_img");
-							play[a].style.zIndex = 1;
-							home[a].style.opacity = 0.5;
-						}
-						function b1(a){
-							var play =  document.getElementsByClassName("header_play");
-							var home =  document.getElementsByClassName("verjin_filmer_img");
-							play[a].style.zIndex = -1;
-							home[a].style.opacity = 1;
-						}
-
-					</script>
 				</div>
 				<div class="logo">
 					<a href="home.php"><img src="nkarner/logo.jpg" alt=""></a>
