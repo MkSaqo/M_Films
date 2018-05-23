@@ -1,6 +1,6 @@
 <?php
-include "new.php";
-include "connect.php";
+include "tpl/header.php";
+include "tpl/connect.php";
 $i = 0;
 $f = 0;
 $filmCount = 6;
@@ -38,8 +38,8 @@ $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(*)"];
 			while ($f++ < $filmCount) {	
 				if($result = mysqli_fetch_assoc($conn)){
 					$bool = true;
-					include "var_data.php";
-					include "article.php";
+					include "tpl/var_data.php";
+					include "tpl/article.php";
 					?>
 					
 				<?php }
@@ -62,5 +62,5 @@ $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(*)"];
 		<?php }?>
 		</div>
 		
-<?php include "right.php" ;?>
-<?php include "footer.php"?>
+<?php include "tpl/right.php" ;?>
+<?php include "tpl/footer.php"?>

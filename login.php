@@ -1,7 +1,7 @@
 <?php
 
-include "new.php";
-include "connect.php";
+include "tpl/header.php";
+include "tpl/connect.php";
 $month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 $dateY = date("Y");
 if (isset($_POST['login'])) {
@@ -95,10 +95,10 @@ if(isset($_POST["login1"])){
                 <input type="submit" name="login" id="lsubmit" value="Log In">
             </form>
         </div>
-        <?php include "reg_form.php" ;?>
+        <?php include "tpl/reg_form.php" ;?>
         
    </div>
 </div>
 <?php
-include "footer.php";
+include "tpl/footer.php";
 ?>

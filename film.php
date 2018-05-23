@@ -1,11 +1,11 @@
 <?php
-include "new.php";
-include "connect.php";
+include "tpl/header.php";
+include "tpl/connect.php";
 $a = $_GET["id"];
 $sql = "SELECT * FROM `kinoner` WHERE `id` = $a ";
 $conn = mysqli_query($db, $sql);
 $result = mysqli_fetch_assoc($conn);
-include "var_data.php";
+include "tpl/var_data.php";
 
 ?>
 
@@ -121,8 +121,8 @@ include "var_data.php";
 						<img id="playerImg" src="<?php echo $nkar0; ?>" width = "100%" height="100%" alt="">
 					</div>
 			</div>
-			<?php include "right.php" ;?>
+			<?php include "tpl/right.php" ;?>
 		</div>
 		
 
-<?php include "footer.php";?>
+<?php include "tpl/footer.php";?>

@@ -1,6 +1,6 @@
 <?php
-include "new.php";
-include "connect.php";
+include "tpl/header.php";
+include "tpl/connect.php";
 
 $i = 0;
 $f = 0;
@@ -37,8 +37,8 @@ $conn = mysqli_query($db, $sql);
             if(isset($pageG) || isset($pageY)){
                 while ($f++ < $filmCount) {	
                     if($result = mysqli_fetch_assoc($conn)){
-                        include "var_data.php";
-                        include "article.php";
+                        include "tpl/var_data.php";
+                        include "tpl/article.php";
                         ?>
                         
                 <?php }}}else{ ?>
@@ -60,5 +60,5 @@ $conn = mysqli_query($db, $sql);
             </p>
         </div>
     </div>
-<?php include "right.php" ;?>
-<?php include "footer.php"?>
+<?php include "tpl/right.php" ;?>
+<?php include "tpl/footer.php"?>

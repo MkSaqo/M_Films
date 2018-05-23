@@ -1,6 +1,6 @@
 <?php 
 include "functions.php";
-include "connect.php";
+include "tpl/connect.php";
 
 ?>
 <!DOCTYPE html>

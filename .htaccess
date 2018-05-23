@@ -1,2 +1,5 @@
-RewriteEngine on
-RewriteRule .* a.php [L]
+RewriteEngine On
+RewriteBase /m_films/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
