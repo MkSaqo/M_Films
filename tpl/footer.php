@@ -52,19 +52,23 @@
 		}
 
 		function gallery(){
-			var spisk = document.getElementsByClassName("art_spisk");
-			var i = 0;
-			while(i<spisk.length){
-				spisk[0].className ="art_gallery";
-			}
-			
+			setTimeout(function() {
+				var spisk = document.getElementsByClassName("art_spisk");
+				var i = 0;
+				while(i<spisk.length){
+					spisk[0].className ="art_gallery";
+				}
+			}, 300);
 		}
 		function spisk(){
-			var gallery = document.getElementsByClassName("art_gallery");
-			var i = 0;
-			while(i<gallery.length){
-				gallery[0].className ="art_spisk";
-			}
+			setTimeout(function() {
+				
+				var gallery = document.getElementsByClassName("art_gallery");
+				var i = 0;
+				while(i<gallery.length){
+					gallery[0].className ="art_spisk";
+				}
+			}, 300);
 			
 		}
 		function a(a){

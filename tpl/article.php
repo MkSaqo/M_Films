@@ -8,7 +8,7 @@
 	</div>
 	
 	<div class="index_s_r">
-		<h2><?php echo $name; ?></h2>
+		<a href="film.php?id=<?php echo $id; ?>"><h2><?php echo $name; ?></h2></a>
 		<div class="index_s_r_1">
 		<?php
 		$arr = [$desc1,$desc2,$desc3,$desc4];

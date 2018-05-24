@@ -96,17 +96,18 @@ include "tpl/var_data.php";
 					} ?>
 				</div>
 					<div class="player">
-							<button class="plLeft" onclick="left()">&#10094</button>
-							<button class="plRight" onclick="right()">&#10095</button>
+						<button class="plLeft" onclick="left()">&#10094</button>
+						<button class="plRight" onclick="right()">&#10095</button>
 						<script>
 							var i = 0;
-							var a = <?php echo "['".$nkar0."','".$nkar1."','".$nkar2."','".$nkar3."','".$nkar4."','".$nkar5."','".$nkar6."','".$nkar7."','".$nkar8."','".$nkar9."','".$nkar10."','".$nkar11."']";?>;
+							var images ="asas";
+							//  <?php echo "['".$nkar0."','".$nkar1."','".$nkar2."','".$nkar3."','".$nkar4."','".$nkar5."','".$nkar6."','".$nkar7."','".$nkar8."','".$nkar9."','".$nkar10."','".$nkar11."']";?>;
 						function right(){
 							var img  = document.getElementById("playerImg");
 							if(i>11){
 								i=0;
 							}
-							img.src = a[i];
+							img.src = images[i];
 							i++;
 						}
 						function left(){
@@ -114,12 +115,22 @@ include "tpl/var_data.php";
 							if(i<0){
 								i=11;
 							}
-							img.src = a[i];
+							img.src = images[i];
 							i--;
 						}
 						</script>
-						<img id="playerImg" src="<?php echo $nkar0; ?>" width = "100%" height="100%" alt="">
+						<img id="playerImg" src="<?php echo $nkar0; ?>" width = "100%" height="300px" alt="">
 					</div>
+					<div class="comments">
+						<form action="">
+							<div class="textarea">
+								<textarea name="" id="" ></textarea>
+							
+							</div>
+						</form>
+					</div>
+
+					
 			</div>
 			<?php include "tpl/right.php" ;?>
 		</div>

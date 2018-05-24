@@ -91,7 +91,7 @@
 				}
 				$sql = "SELECT `home_img`,`name`,`id` FROM `kinoner`";
 				$data = mysqli_query($db,$sql);
-				while($i<12){
+				while($i<14){
 					$r = mysqli_fetch_assoc($data);
 					$bool = true;
 					for($j = 0;$j<count($arr);$j++){
