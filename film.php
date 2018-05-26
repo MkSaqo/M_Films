@@ -121,14 +121,8 @@ include "tpl/var_data.php";
 						</script>
 						<img id="playerImg" src="<?php echo $nkar0; ?>" width = "100%" height="300px" alt="">
 					</div>
-					<div class="comments">
-						<form action="">
-							<div class="textarea">
-								<textarea name="" id="" ></textarea>
-							
-							</div>
-						</form>
-					</div>
+				<?php include "tpl/comments.php" ;?>
+					
 
 					
 			</div>
