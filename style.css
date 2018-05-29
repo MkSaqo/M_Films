@@ -81,10 +81,15 @@ a:hover{
 	margin: auto;
 }
 .Ldiv,.Rdiv{
+	margin-left: 18%;
 	width: 430px;
 	display: inline-block;
 	background:white;
-	text-align:center;
+	padding-left: 110px;
+}
+.Rdiv span{
+	display: none;
+	color: red;
 }
 .Ldiv #lname, #lpass,#lsubmit{
 	width: 250px;
@@ -93,7 +98,8 @@ a:hover{
 	/* background-color:black; */
 	font-size:25px;
 }
-#lsubmit,#Rsubmit{
+#Rsubmit{
+	margin-left: 50px;
 	font-size: 25px;
 	background:darkcyan;
 }
@@ -105,14 +111,22 @@ a:hover{
 
 }
 .footer p{
-	margin: 0;
 	color: white;
+}
+.ib{
+	margin-left: 43px;
+	display: inline-block;
+
+}
+.p_login{
+	display: inline-block;
+    font-size: 21px;
+    margin-right: 70px;
 }
 
 .login{
 	float: right;
-	background: red;
-}
+	}
 .Rdiv th {
 	width:200px;
 }
@@ -141,7 +155,7 @@ a:hover{
 /*___________________________ARTICLE___________________-*/
 
 .art_spisk{
-	padding-bottom: 24px;
+	padding-bottom:30px;
 	border-bottom:5px solid azure;	
 }
 .art_spisk img{
@@ -174,6 +188,10 @@ a:hover{
 	display: none;
 	margin: 0;
 	padding: 0;
+}
+.none h2{
+	width: auto;
+	font-size: large;
 }
 .art_gallery{
 	position: relative;
@@ -258,7 +276,7 @@ a:hover{
 	transform: translateY(3px);
 }
 
-.container{
+.container1{
 	background: rgba(10,12,122,0.3);
 }
 
@@ -384,6 +402,9 @@ a:hover{
 
 	list-style-type: none;
 }
+.film_r_cat1{
+	margin-top: 17px;
+}
 .film_r_cat2 ul{
 	margin: 15px;
 	padding: 0;
@@ -441,7 +462,7 @@ a:hover{
 }
 
 /* ______________________________SEARCH______________________________ */
-.search h2,.index_left h2{
+.search h2,.index_left h2,.nof{
 	
 	color: white;
 	text-align:center;
@@ -454,7 +475,14 @@ a:hover{
     margin: auto;
 }
 
-
+.panel{
+	width: 86%;
+	color: #1E1E20;
+	text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
 .comments{
 	width: 100%;
 	text-align: center;
@@ -464,7 +492,7 @@ a:hover{
 	display: block;
 	min-height: 100px;
 	padding: 19px 20px 0 23px;
-	width: 93%;
+	width: 100%;
     background: transparent;
     font-family: SourceSansPro-Bold;
     font-size: 16px;
@@ -497,6 +525,40 @@ a:hover{
 }
 .us_coms{
 	width: 100%;
-		color: black;
+	color: black;
 	background: white;
+}
+.insert input{
+	width:250px;
+	margin-bottom: 5px;
+	padding: 4px;
+}
+.insert_right span{
+	display: inline-block;
+	text-transform: capitalize;
+	vertical-align: top;
+	width: 160px;
+}
+.insert_left span{
+	vertical-align: top;
+	display: inline-block;
+	text-transform: capitalize;
+	width: 100px;
+}
+.insert_left{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+.insert_right{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+.insert_left textarea{
+	max-width: 250px;
+	min-width: 250px;
+	max-height: 90px;
+	min-height: 140px;
+	overflow: auto;
 }

@@ -1,31 +1,51 @@
-<!-- ___________________________FOOTER____________________________ -->
-		
+			<?php 
+			$_SESSION["link"] = explode("/",$_SERVER["SCRIPT_NAME"])[2];
+			
+			?>
 			<div class="footer">
 				<div class="login">
+				<?php if(isset($_SESSION["login"])){ ?>
+					<p class="ib"><a href="admin.php"> Append film</a></p>
+					<form class="ib" method="post" action="tpl/login_check.php">
+						<input type="submit" value="Log out" name="logout">
+					</form>
+					<?php } else{?>
 					
-				<?php
-					$href =explode('?',$_SERVER["REQUEST_URI"])[0];
-					if( $href !=  "/m_films/login.php"){
-						?>
-						<form action="login.php" method="get">
-							<?php if(isset($_SESSION["login"])){ ?>
-								<input type="submit" name = "logouted"  value="Log Out">							
-							<?php } else { ?>
-								<input type="submit" value="Log In">
-							<?php } ?>
-						</form>
-						<?php
-
-					}
-				?>
+					<p class="p_login"><b> Log In</b></p>
+					<a href="reg.php"><p class="p_login"> Register</p></a>
+					<form method="post" action="tpl/login_check.php">
+						<input name="Lmail" type="text" placeholder="Email">
+						<input name="Lpass" type="password" placeholder="Passworld">
+						<input name="login" type="submit" value = "Log In">
+					</form>
+					<?php }	
+					
+					?>
 				</div>
 				<br>
-				<p>© 2017</p>
+				<p>© <?php echo date("Y") ?></p>
 				<p>Սարգիս Մկրտչյան</p>
-				<br>
+				
+					<div id="cb"></div>
 			</div>
-		</div><!-- __________________STTE_DIV__END___ ____________________-->
+		</div>
 		<script>
+		function right(){
+			var img  = document.getElementById("playerImg");
+			if(i>11){
+				i=0;
+			}
+			img.src = images[i];
+			i++;
+		}
+		function left(){
+			var img  = document.getElementById("playerImg");
+			if(i<0){
+				i=11;
+			}
+			img.src = images[i];
+			i--;
+		}
 		function a2(a){
 			var play =  document.getElementsByClassName("right_play");
 			var home =  document.getElementsByClassName("right_imgs");

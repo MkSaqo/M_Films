@@ -6,15 +6,16 @@ include "tpl/connect.php";
 <!DOCTYPE html>
 <html class="html_filmer1">
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="icon" href="nkarner/logo.jpg">
 		<meta charset="utf-8">
 		<title>M_Films</title>
 	</head>
 	<body>
-		<!-- ________________________SITE___________________________ -->
 		<div class="site">
-			<!-- ________________________HEADER_________________________ -->
 			<div class="header">
 				<div class="verjin_filmer">
 					<?php

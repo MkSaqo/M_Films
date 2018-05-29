@@ -18,7 +18,7 @@ $conn = mysqli_query($db, $sql);
 
 ?>
 
-	<div class="container">
+	<div class="container1">
 		<div class="index_left">
 			<div class="change_js">
 				<div class="icon_gallery" onclick="gallery()"></div>

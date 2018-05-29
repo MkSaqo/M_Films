@@ -28,11 +28,13 @@ else if(isset($_GET['G'])){
 }
 $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
 $conn = mysqli_query($db, $sql);
-
+$result = mysqli_fetch_assoc($conn);
 ?>
 
-	<div class="container">
+	<div class="container1">
 		<div class="index_left">
+        <?php if(isset($result)){?>
+
             <div class="change_js">
 				<div class="icon_gallery" onclick="gallery()"></div>
 				<div class="icon_spisk" onclick="spisk()"></div>
@@ -41,14 +43,13 @@ $conn = mysqli_query($db, $sql);
 			<?php
             if(isset($pageG) || isset($pageY)){
                 while ($f++ < $filmCount) {	
-                    if($result = mysqli_fetch_assoc($conn)){
+                    if($result){
                         include "tpl/var_data.php";
                         include "tpl/article.php";
+                        $result = mysqli_fetch_assoc($conn)
                         ?>
                         
-                <?php }}}else{ ?>
-                <h2>No selected category</h2>
-                <?php } ?>
+                <?php }}}?>
         <div class="pages">
             <p><?php
             for($i = 1;$i<=ceil($conCount/$filmCount);$i++){
@@ -64,6 +65,9 @@ $conn = mysqli_query($db, $sql);
             <?php }?>
             </p>
         </div>
+            <?php }else{?>
+                <h2>No selected category</h2>
+                <?php } ?>
     </div>
 <?php include "tpl/right.php" ;?>
 <?php include "tpl/footer.php"?>

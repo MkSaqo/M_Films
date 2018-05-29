@@ -60,10 +60,10 @@ else if(isset($_POST["end"])){
 }
 else {
     ?>
-       <input type="email" name="email"><br>
+       <input type="text" name="email"><span>email registred</span><br>
        <input type="password" required name="pass"><br>
        <input type="submit" value="Send" name="login1" id="Rsubmit">
 
-       <?php }?>
+<?php }?>
     </form>
 </div>

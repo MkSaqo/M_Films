@@ -30,7 +30,7 @@ OR (`budget` LIKE '%".$q."%')OR (`revenue` LIKE '%".$q."%')OR (`genres` LIKE '%"
 $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(*)"];
 ?>
 
-	<div class="container">
+	<div class="container1">
 		<div class="search">
 			<div class="change_js">
 				<div class="icon_gallery" onclick="gallery()"></div>

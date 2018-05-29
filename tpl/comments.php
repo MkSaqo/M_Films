@@ -1,22 +1,48 @@
 <div class="comments">
-    <form action="">
+    <form method="POST" id="comment_form">
         <div class="textarea">
-            <textarea name="" id="" ></textarea>
+            <textarea name="comment_content" id="comment_content" ></textarea>
         </div><br>  
-        <button class="com_sub" type="submit" >Send</button><br><br><br>
+        <input class="com_sub" type="submit" name="submit" id="submit" value="Send" /><br><br><br>
     </form>
-    <div class="us_com">
-        <?php 
-        $comm = explode(",,>>",$comm);
-        for($i = 1;$i<count($comm);$i++){
-            $comm2 = explode(",,<<",$comm[$i]);
-            ?>
-            <div class="us_coms">
-                <?php echo $comm2[0];?>
-                <?php echo $comm2[1];?>
-            </div>
-            <?php
-        }
-        pre($comm);?>
-    </div>
+   <span id="comment_message"></span><br/>
+   <div id="display_comment"></div>
+    
 </div>
+    <script>
+$(document).ready(function(){
+ 
+ $('#comment_form').on('submit', function(event){
+  <?php $_SESSION["comm_id"]=$id; ?>
+  event.preventDefault();
+<?php if(isset($_SESSION["login"])){?>
+  var form_data = $(this).serialize();
+  $.ajax({
+   url:"tpl/add_comment.php",
+   method:"POST",
+   data:form_data,
+   dataType:"JSON",
+   success:function(data){
+    if(data.error != ''){
+     $('#comment_form')[0].reset();
+     $('#comment_message').html(data.error);
+     load_comment();
+    }
+   }
+  })
+<?php } ?>
+ });
+
+ load_comment();
+
+ function load_comment(){
+  $.ajax({
+   url:"tpl/fetch_comment.php",
+   method:"POST",
+   success:function(data){
+    $('#display_comment').html(data);
+   }
+  })
+ } 
+});
+</script>
