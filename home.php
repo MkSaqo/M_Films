@@ -11,9 +11,9 @@ if(isset($_GET['page'])){
 else{
 	$page=1;
 }
-$sql1 = "SELECT COUNT(`id`) FROM `kinoner`";
+$sql1 = "SELECT COUNT(`id`) FROM `kinoner` ";
 $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
-$sql = "SELECT * FROM `kinoner` WHERE `id` >=$page*$filmCount-$filmCount";
+$sql = "SELECT * FROM `kinoner` WHERE `id` >=$page*$filmCount-$filmCount  ORDER BY `id` DESC";
 $conn = mysqli_query($db, $sql);
 
 ?>

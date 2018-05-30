@@ -32,7 +32,7 @@
 		<script>
 		function right(){
 			var img  = document.getElementById("playerImg");
-			if(i>11){
+			if(i>9){
 				i=0;
 			}
 			img.src = images[i];
@@ -41,7 +41,7 @@
 		function left(){
 			var img  = document.getElementById("playerImg");
 			if(i<0){
-				i=11;
+				i=9;
 			}
 			img.src = images[i];
 			i--;

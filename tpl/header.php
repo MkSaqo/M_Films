@@ -20,7 +20,7 @@ include "tpl/connect.php";
 				<div class="verjin_filmer">
 					<?php
 	
-					$sql = "SELECT * FROM `kinoner`";
+					$sql = "SELECT * FROM `kinoner` ORDER BY `id` DESC ";
 					$conn = mysqli_query($db,$sql);
 					$i = 0;
 					while(++$i<8){

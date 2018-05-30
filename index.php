@@ -1,6 +1,6 @@
 <?php 
 $state = false;
-$pages = array("cat.php","film.php","home.php","reg.php","search.php");
+$pages = array("cat.php","admin.php","film.php","home.php","reg.php","search.php");
 $page = explode("/",$_SERVER['REQUEST_URI'])[2];
 $page = explode("?",$page);
 for($i=0;$i<count($pages);$i++){

@@ -1,7 +1,7 @@
 <?php
-   include "tpl/header.php";
-   include "tpl/footer.php";
-   die();	
+//    include "tpl/header.php";
+//    include "tpl/footer.php";
+//    die();	
    include "tpl/header.php";
    include "tpl/connect.php";
    $a = $_GET["id"];
@@ -80,7 +80,7 @@
 					<p><?php echo $desc ?></p>
 				</div>
 				<div class="film_trailer">
-					<iframe src="<?php echo $trailer; ?>" frameborder="0"></iframe>
+					<?php echo $trailer; ?>
 				</div>
 			</div>
 			<div class="film_glavn">
@@ -103,10 +103,9 @@
 				<script>
 					var i = 0;
 					var images =
-					<?php echo "['".$nkar0."','".$nkar1."','".$nkar2."','".$nkar3."','".$nkar4."','".$nkar5."','".$nkar6."','".$nkar7."','".$nkar8."','".$nkar9."','".$nkar10."','".$nkar11."']";?>;
-					
+					<?php echo "['".$nkar1."','".$nkar2."','".$nkar3."','".$nkar4."','".$nkar5."','".$nkar6."','".$nkar7."','".$nkar8."','".$nkar9."','".$nkar10."']";?>;
 				</script>
-				<img id="playerImg" src="<?php echo $nkar0; ?>" width = "100%" height="300px" alt="">
+				<img id="playerImg" src="<?php echo $nkar1; ?>" width = "100%" height="300px" alt="">
 			</div>
 			<?php include "tpl/comments.php" ;
 				}else{

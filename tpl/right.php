@@ -16,7 +16,7 @@
 						<ul>
 							<?php 
 							for($i=date("Y");$i>=2000;$i--){	
-								$sql = "SELECT `relase` FROM `kinoner` WHERE `relase` LIKE '%$i%'";
+								$sql = "SELECT `relase` FROM `kinoner` WHERE `relase` LIKE '%$i%'  ORDER BY `id` DESC";
 								$data = mysqli_query($db,$sql);
 								$l=0;
 								while($r = mysqli_fetch_assoc($data)){
@@ -33,7 +33,7 @@
 						?>
 						<ul>
 							<?php for($i=0;$i<count($genres1);$i++){
-									$sql = "SELECT `genres` FROM `kinoner` WHERE `genres` LIKE '%$genres1[$i]%'";
+									$sql = "SELECT `genres` FROM `kinoner` WHERE `genres` LIKE '%$genres1[$i]%'  ORDER BY `id` DESC";
 									$data = mysqli_query($db,$sql);
 									$l=0;
 									while($r = mysqli_fetch_assoc($data)){
@@ -56,7 +56,7 @@
 				if(isset($genres)){
 					for($m = 0;$m<count($genres);$m++){
 						if(gettype($genres)=="array" && array_key_exists($m,$genres)){
-							$sql = "SELECT `home_img`,`name`,`id` FROM `kinoner` WHERE `genres` LIKE '%$genres[$m]%'";
+							$sql = "SELECT `home_img`,`name`,`id` FROM `kinoner` WHERE `genres` LIKE '%$genres[$m]%'  ORDER BY `id` DESC";
 							$data = mysqli_query($db,$sql);
 							while($r = mysqli_fetch_assoc($data)){
 								$bool = true;
@@ -89,7 +89,7 @@
 						}
 					}
 				}
-				$sql = "SELECT `home_img`,`name`,`id` FROM `kinoner`";
+				$sql = "SELECT `home_img`,`name`,`id` FROM `kinoner` ORDER BY `id` DESC";
 				$data = mysqli_query($db,$sql);
 				while($i<14){
 					$r = mysqli_fetch_assoc($data);

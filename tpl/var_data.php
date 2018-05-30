@@ -26,7 +26,6 @@
 	$genres = $result["genres"];
 	$lang = $result["lang"];
 	$trailer = $result["trailer"];
-	$nkar0 = $result["nkar0"];
 	$nkar1 = $result["nkar1"];
 	$nkar2 = $result["nkar2"];
 	$nkar3 = $result["nkar3"];
@@ -37,6 +36,5 @@
 	$nkar8 = $result["nkar8"];
 	$nkar9 = $result["nkar9"];
 	$nkar10 = $result["nkar10"];
-	$nkar11 = $result["nkar11"];
 	$comm = $result["comments"];
  ?>

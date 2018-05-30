@@ -1,9 +1,11 @@
 <div class="insert">
+    <h1>Welcome <?php echo $_SESSION['login']; ?></h1>
 <form method="post" enctype="multipart/form-data">
     <?php 
     // $sql = "SELECT * FROM `kinoner`";
     // $r = mysqli_fetch_assoc(mysqli_query($db,$sql));
-    // pre($r);
+    // pre($_FILES);
+    // pre($_POST);    
     ?>
     <div class="insert_left">
         <span> name :</span><input required type="text" name="name"  placeholder="name"><br>
@@ -20,38 +22,22 @@
         <span> revenue :</span><input required type="text" name="revenue" placeholder="revenue"><br>
         <span> genres :</span><input required type="text" name="genres" placeholder="genres"><br>
         <span> lang :</span><input required type="text" name="lang" placeholder="lang"><br>
+        <span> video enbed code :</span><input required type="text" name="trailer" placeholder="video enbed code"><br>
         <span> relase month,day :</span><input required type="text" name="relase1" placeholder="relase month,day"><br>
-        <span> iframe enbed src :</span><input required type="text" name="trailer" placeholder="iframe enbed src"><br>
         <span> relase year :</span><input required type="text" name="relase2" placeholder="relase year"><br>
     </div>
-	<input type="submit" name="insert" value="add">
-</form>
+    <div class="insert_glavn">    
+        <span>Top Biled Cast Name 1</span><input required type="text" name="glavni1" placeholder="Top Biled Cast Name 1"><span class="insert_glavnn">Top Biled Cast image 1</span><input type="file" name="glavnin1"><br>
+        <span>Top Biled Cast Name 2</span><input required type="text" name="glavni2" placeholder="Top Biled Cast Name 2"><span class="insert_glavnn">Top Biled Cast image 2</span><input type="file" name="glavnin2"><br>
+        <span>Top Biled Cast Name 3</span><input required type="text" name="glavni3" placeholder="Top Biled Cast Name 3"><span class="insert_glavnn">Top Biled Cast image 3</span><input type="file" name="glavnin3"><br>
+        <span>Top Biled Cast Name 4</span><input required type="text" name="glavni4" placeholder="Top Biled Cast Name 4"><span class="insert_glavnn">Top Biled Cast image 4</span><input type="file" name="glavnin4"><br>
+        <span>Top Biled Cast Name 5</span><input required type="text" name="glavni5" placeholder="Top Biled Cast Name 5"><span class="insert_glavnn">Top Biled Cast image 5</span><input type="file" name="glavnin5"><br>
+    </div>
+    <div class="home_ten">
+        <span>10 Images slide </span><input type="file" name="ten_images[]" required multiple>
+        <span>Main Picture</span><input type="file" name="home_img" required>
     </div>
 
-    
-    
-    
-    [nkar0] => nkarner/AvengersInfinityWar0.jpg
-    [nkar1] => nkarner/AvengersInfinityWar1.jpg
-    [nkar2] => nkarner/AvengersInfinityWar2.jpg
-    [nkar3] => nkarner/AvengersInfinityWar3.jpg
-    [nkar4] => nkarner/AvengersInfinityWar4.jpg
-    [nkar5] => nkarner/AvengersInfinityWar5.jpg
-    [nkar6] => nkarner/AvengersInfinityWar6.jpg
-    [nkar7] => nkarner/AvengersInfinityWar7.jpg
-    [nkar8] => nkarner/AvengersInfinityWar8.jpg
-    [nkar9] => nkarner/AvengersInfinityWar9.jpg
-    [nkar10] => nkarner/AvengersInfinityWar10.jpg
-    [nkar11] => nkarner/AvengersInfinityWar11.jpg
-
-    [glavnin0] => nkarner/Robert.jpg
-    [glavnin1] => nkarner/Chris.jpg
-    [glavnin2] => nkarner/Mark.jpg
-    [glavnin3] => nkarner/Chris.jpg
-    [glavnin4] => nkarner/Scarlett.jpg
-    [glavni0] => Robert Downey Jr. Tony Stark / Iron Man
-    [glavni1] => Chris Hemsworth Thor
-    [glavni2] => Mark Ruffalo Bruce Banner / Hulk
-    [glavni3] => Chris Evans Steve Rogers / Captain America
-    [glavni4] => Scarlett Johansson Natasha Romanoff / Black Widow
-    [home_img] => nkarner/Avengers: Infinity War.jpg
+    <input type="submit" class="insert_submit" name="insert" value="add">
+</form>
+    </div>

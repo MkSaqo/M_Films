@@ -309,6 +309,7 @@ a:hover{
 .right_imgs{
 	position: absolute;
 	height: 200px;
+	width: 129px;
 	border-radius: 30px;
 	overflow: auto;
 	z-index: 1;
@@ -320,6 +321,7 @@ a:hover{
 .film_home_img img{
 	display: inline-block;
 	width: 200px;
+	height: 300px;
 }
 .film_content{
 	width: 65%;
@@ -341,6 +343,7 @@ a:hover{
 }
 .film_glavn img{
 	width:110px;
+	height:139px;
 }
 .film_glavn p {
 	text-align: center;
@@ -528,7 +531,14 @@ a:hover{
 	color: black;
 	background: white;
 }
+.insert{
+	color: white;
+}
+.insert h1{
+	text-align: center;
+}
 .insert input{
+	color: #1E1E20;
 	width:250px;
 	margin-bottom: 5px;
 	padding: 4px;
@@ -546,7 +556,8 @@ a:hover{
 	width: 100px;
 }
 .insert_left{
-	width: 49%;
+	width: 42%;
+    margin-left: 63px;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -556,9 +567,38 @@ a:hover{
 	vertical-align: top;
 }
 .insert_left textarea{
+	color: #1E1E20;
 	max-width: 250px;
 	min-width: 250px;
 	max-height: 90px;
 	min-height: 140px;
 	overflow: auto;
+}
+.insert_glavn input{
+	margin-left: 11px;
+	display: inline-block;
+}
+.insert_glavn{
+	padding-left: 10px;
+	margin: 15px 0;
+}
+.home_ten input{
+	width: 200px;
+	display: inline-block;
+}
+.home_ten span{
+	margin-left: 80px;
+	margin-right: 10px;
+}
+.insert_glavnn{
+	margin-left: 29px;
+	margin-right: 29px;
+}
+.insert_submit{
+	margin-left: 37%;
+	margin-top: 20px;
+	width: 200px;
+	height: 34px;
+	background: #6b6;
+	border: 0;
 }
