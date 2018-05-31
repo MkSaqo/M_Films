@@ -74,6 +74,10 @@
 								?>
 						</td>
 					</tr>
+					<tr>
+						<th>By </th>
+						<td>: <?php echo $from; ?> </td>
+					</tr>
 					</table>
 				</div>
 				<div class="film_desc">
@@ -110,8 +114,7 @@
 			<?php include "tpl/comments.php" ;
 				}else{
 					echo "<h2 class='nof'>No film selected</h2>";
-				}
-					?>
+				}?>
 		</div>
 		<?php
 			include "tpl/right.php" ;?>

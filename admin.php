@@ -29,7 +29,7 @@ $root = $_SESSION['login'];
                         $nkar7 = "nkarner/".$ten_images[7];
                         $nkar8 = "nkarner/".$ten_images[8];
                         $nkar9 = "nkarner/".$ten_images[9];
-                        $nkar10 = "nkarner/".$ten_images[10];
+                        $nkar10 = "nkarner/".$ten_images[0];
                         $count++;
                     }
                     if($_FILES["glavnin1"]["name"]){

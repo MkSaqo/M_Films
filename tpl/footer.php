@@ -30,21 +30,21 @@
 			</div>
 		</div>
 		<script>
-		function right(){
-			var img  = document.getElementById("playerImg");
-			if(i>9){
-				i=0;
-			}
-			img.src = images[i];
-			i++;
-		}
 		function left(){
 			var img  = document.getElementById("playerImg");
-			if(i<0){
+			if(i>=9){
+				i=0;
+			}
+			i++;
+			img.src = images[i];
+		}
+		function right(){
+			var img  = document.getElementById("playerImg");
+			if(i<=0){
 				i=9;
 			}
-			img.src = images[i];
 			i--;
+			img.src = images[i];
 		}
 		function a2(a){
 			var play =  document.getElementsByClassName("right_play");

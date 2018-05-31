@@ -37,4 +37,5 @@
 	$nkar9 = $result["nkar9"];
 	$nkar10 = $result["nkar10"];
 	$comm = $result["comments"];
+	$from = $result["from"];
  ?>
