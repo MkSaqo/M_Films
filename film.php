@@ -51,9 +51,16 @@
 					</tr>
 					<tr>
 						<th>Year </th>
-						<td>: <?php 
+						<td>:
+						<?php 
+						if(isset(explode(" ",$relase)[1])){
 							$y = explode(" ",$relase);
-							echo $y[0]." ".$y[1].$y[2] ; ?></td>
+							if(isset(explode(",",$relase)[1])){
+								$y[] = $relase[1];
+							}
+						
+						} 
+						echo $y[0]." ".$y[1].$y[2] ; ?></td>
 					</tr>
 					<tr>
 						<th>Language </th>

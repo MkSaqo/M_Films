@@ -22,7 +22,6 @@
 	$budget = $result["budget"];
 	$revenue = $result["revenue"];
 	$relase = $result["relase"];
-	$home_page = $result["home_page"];
 	$genres = $result["genres"];
 	$lang = $result["lang"];
 	$trailer = $result["trailer"];

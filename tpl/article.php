@@ -34,7 +34,8 @@
 			
 		</div>
 		<div class="index_s_r_2">
-		<?php $year = explode(" ",$relase)[2]; ?>
+		<?php if(isset(explode(" ",$relase)[2])) $year = explode(" ",$relase)[2];
+			else $year = explode(",",$relase)[1];?>
 			<p><b>Status </b> : <?php echo $status; ?></p> 
 			<p><b>Time </b> : <?php echo $time; ?></p> 
 			<p><b>Budget </b> : <?php echo $budget; ?></p> 
