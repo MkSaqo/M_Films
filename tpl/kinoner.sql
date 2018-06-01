@@ -142,7 +142,7 @@ ALTER TABLE `users`
 ALTER TABLE `kinoner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table `usaers`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
