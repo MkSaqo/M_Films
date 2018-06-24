@@ -116,7 +116,7 @@
 					var images =
 					<?php echo "['".$nkar1."','".$nkar2."','".$nkar3."','".$nkar4."','".$nkar5."','".$nkar6."','".$nkar7."','".$nkar8."','".$nkar9."','".$nkar10."']";?>;
 				</script>
-				<img id="playerImg" src="<?php echo $nkar1; ?>" width = "100%" height="300px" alt="">
+				<img id="playerImg" src="<?php echo $nkar1; ?>" width = "100%" height="500px" alt="">
 			</div>
 			<?php include "tpl/comments.php" ;
 				}else{

@@ -1,12 +1,37 @@
 body{
-	background-image: url("nkarner/0body_back.jpg");
+	/*background-image: url("nkarner/0body_back.jpg");*/
 	/* background-image: url("https://i.redd.it/3lxlwac0rfmx.png"); */
 	background-attachment: fixed;
+	background-color: #202020;
 
+}
+a:hover {
+	color: #4bb543 !important;
+	text-decoration: none;
 }
 ::-webkit-input-placeholder {
 	text-align: center;
  }
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #202020;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #4bb543;
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
 pre{
 	background: black;
 	color: white;
@@ -15,10 +40,7 @@ pre{
 a{
 	color: white;
 	text-decoration: none;
-}
-a:hover{
-	color: blue;
-	text-decoration: underline;
+	transition: .3s;
 }
 /*<!-- _________________________SITE________________________ -->*/
 .site{
@@ -81,11 +103,21 @@ a:hover{
 	margin: auto;
 }
 .Ldiv,.Rdiv{
-	margin-left: 18%;
 	width: 430px;
 	display: inline-block;
 	background:white;
-	padding-left: 110px;
+	text-align: center;
+	background-color: rgba(48,48,48,.5);
+	color: white;
+	margin-left: 250px;
+	height: 280px;
+}
+.Rdiv input {
+	background-color: #303030;
+	border: 0;
+	margin-top: 15px;
+	height: 35px;
+	width: 270px;
 }
 .Rdiv span{
 	display: none;
@@ -99,7 +131,6 @@ a:hover{
 	font-size:25px;
 }
 #Rsubmit{
-	margin-left: 50px;
 	font-size: 25px;
 	background:darkcyan;
 }
@@ -107,8 +138,8 @@ a:hover{
 .footer{
 	text-align: center;
 	background-image: url("nkarner/footer_background_image.jpg");
-	background-size: 1300px 200px;
-
+	background-size: 1600px 100%;
+	padding: 30px;
 }
 .footer p{
 	color: white;
@@ -116,17 +147,23 @@ a:hover{
 .ib{
 	margin-left: 43px;
 	display: inline-block;
-
 }
 .p_login{
 	display: inline-block;
     font-size: 21px;
-    margin-right: 70px;
 }
-
+.footer-form input {
+	width: 100%;
+	margin: 2px 0;
+}
 .login{
 	float: right;
-	}
+	background-color: rgba(48,48,48,.5);		
+	width: 400px;
+}
+.login * {
+	display: block;
+}
 .Rdiv th {
 	width:200px;
 }
@@ -155,8 +192,9 @@ a:hover{
 /*___________________________ARTICLE___________________-*/
 
 .art_spisk{
-	padding-bottom:30px;
-	border-bottom:5px solid azure;	
+	margin: 35px 0;
+	padding:30px 15px;
+	background-color: rgba(48, 48, 48, .5);
 }
 .art_spisk img{
 	width: 200px;	
@@ -236,6 +274,15 @@ a:hover{
 .pages p{
 	text-align: center;
 }
+.pages a {
+	margin: 0 15px;
+	padding: 10px 15px;
+}
+.pages a:hover {
+	background-color: white;
+	color: black !important;
+	text-decoration: none;
+}
 .index_s_r h2{
 	text-align: center
 }
@@ -258,29 +305,20 @@ a:hover{
 	margin-bottom: 8px;
 	margin-right: 18px;
 	float: right;
-	border-radius: 100px;
 	letter-spacing: 4px;
 	cursor: pointer;
 	background: #2D2F33;
+	transition: 0.5s;
 }
-.watch:hover{
-	opacity: 0.9;
-	
+.art_spisk .watch:hover {
+	background-color: #4bb543;
+	color: white !important;
+	letter-spacing: 0;
 }
 #watch{
 	color: white;
 	text-decoration: none;
 }
-
-.watch:active {
-	transform: translateY(3px);
-}
-
-.container1{
-	background: rgba(10,12,122,0.3);
-}
-
-
 #cb{
 	clear: both;
 }
@@ -310,7 +348,6 @@ a:hover{
 	position: absolute;
 	height: 200px;
 	width: 129px;
-	border-radius: 30px;
 	overflow: auto;
 	z-index: 1;
 }
@@ -380,19 +417,18 @@ a:hover{
 }
 .player{
 	margin-top: 30px;
-	width:60%;
-	margin: auto;
+	width:100%;
 }
 .plLeft,.plRight{
 	position: relative;
-	top:175px;
+	top:270px;
 	border:0 solid;
 	height: 50px;
 	background: rgba(0,0,0,0.8);
 	color:white;	
 }
 .plRight{
-	left:90.5%;
+	left:95.3%;
 }
 
 /* __________________________________filmRight______________________ */
@@ -444,11 +480,13 @@ a:hover{
 .r_search .search {
 	margin-left: 40px;
 	margin-top: 10px;
-	padding: 0 30px;
 	font-size: 15px;
 	width: 60%;
-	height: 40px;
-	border-radius: 20px 0 0 20px;
+	height: 25px;
+	padding-left: 10px;
+	background-color: rgba(48, 48, 48, .5);
+	border: 0;
+	color: white;
 }
 
 .r_search .submit {
@@ -461,12 +499,11 @@ a:hover{
 	padding: 15px 25px;
 	display: inline-block;
 	width: 70px;
-	height: 40px;
+	height: 25px;
 }
 
 /* ______________________________SEARCH______________________________ */
-.search h2,.index_left h2,.nof{
-	
+.search h2,.index_left h2,.nof{	
 	color: white;
 	text-align:center;
 }
@@ -488,43 +525,48 @@ a:hover{
 }
 .comments{
 	width: 100%;
-	text-align: center;
 	margin-top: 30px;
+	text-align: center;
 }
 .comments textarea{
 	display: block;
 	min-height: 100px;
-	padding: 19px 20px 0 23px;
+	padding: 10px 20px 0 23px;
 	width: 100%;
     background: transparent;
     font-family: SourceSansPro-Bold;
-    font-size: 16px;
-    color: #4b2354;
+    font-size: 14px;
+    color: lightgrey;
+    font-weight: 100;
     line-height: 1.2;
 	outline: none;
     border: none;
+    font-family: sans-serif;
 }
 .textarea{
-	background: white;
+	background: rgba(78, 78, 78, .5);
 	overflow: auto;
-	width: 76%;
-	display: inline-block;
-	box-shadow: 7px 12px 18px -10px black;
-	border-radius: 30px;
+	width: 98%;
+	display: inline-block;	
+	margin-top: 40px;	
 }
-
-
+/*.comments textarea:focus .textarea {
+	box-shadow: 0 0 18px 1px white;
+}*/
 .com_sub{
 	float: right;
-	margin-right: 111px;
-	margin-top: 	11px;
-	background: #6b6;
+	margin-right: 11px;
+	margin-top: 11px;
 	min-width: 110px;
-	box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.1), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 	height: 30px;
 	font: 700 12px/1 'Open Sans', sans-serif;
-	color: #fff;
+	background-color: rgba(78, 78, 78, .5);
+	border:0;
+	transition: .5s;
+}
+.com_sub:hover {
+	background-color: #4bb543;
 }
 .us_coms{
 	width: 100%;
@@ -601,4 +643,153 @@ a:hover{
 	height: 34px;
 	background: #6b6;
 	border: 0;
+}
+.header_2_bodyStart {
+	margin-top: 70px;
+}
+.video_all_screen {
+	width: 100%;
+}
+#vid-div {
+	position: relative;
+	overflow: hidden;
+}
+.header2-logo {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 20%;
+	left: 40%;	
+	transition: 0.8s;
+}
+.header2-logo img {
+	opacity: 0.7;
+	width: 300px;
+	height: 200px;
+	transition: 0.5s;
+}
+.header2-logo p {
+	text-align: center;
+	margin: 30px;
+	color: white;
+	opacity: 0.5;
+	transition: 0.5s;
+}
+.header2-logo:hover {
+	opacity: 1;
+	background-color: rgba(128,228,228,0.7);
+}
+.header2-logo:hover p {
+	opacity: 1;
+}
+.demo {
+	border-radius: 100%;
+	width: 70px;
+	height: 70px;
+	margin: auto;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 10px;
+	transition: 0.7s;
+}
+.demo a {
+	margin: 0;
+	color: white;
+}
+.demo:hover {
+	background-color: white;
+}
+.demo:hover a {
+	color: black !important;	
+}
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }

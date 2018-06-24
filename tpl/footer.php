@@ -1,4 +1,4 @@
-			<?php 
+<?php 
 			$_SESSION["link"] = explode("/",$_SERVER["SCRIPT_NAME"])[2];
 			
 			?>
@@ -13,7 +13,7 @@
 					
 					<p class="p_login"><b> Log In</b></p>
 					<a href="reg.php"><p class="p_login"> Register</p></a>
-					<form method="post" action="tpl/login_check.php">
+					<form method="post" class="footer-form" action="tpl/login_check.php">
 						<input name="Lmail" type="text" placeholder="Email">
 						<input name="Lpass" type="password" placeholder="Passworld">
 						<input name="login" type="submit" value = "Log In">
@@ -28,7 +28,6 @@
 				
 					<div id="cb"></div>
 			</div>
-		</div>
 		<script>
 		function left(){
 			var img  = document.getElementById("playerImg");

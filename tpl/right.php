@@ -7,7 +7,7 @@
 							value="<?php echo $_GET['q']?>"
 							<?php 
 						} ?>
-						type="text" id="search" name="q" />
+						type="text" id="search" name="q" placeholder="Search"/>
 						<input class="submit" type="submit" value=" " />
 					</form>
 				</div>
