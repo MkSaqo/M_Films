@@ -25,19 +25,22 @@ while(++$i<8){
 	</head>
 	<body>
 		<div id="vid-div">
-			<video id="_vidElement" class="video_all_screen" muted loop src="<?php echo $vid[0]['element']; ?>" type="video/mp4"></video>
+			<video id="_vidElement" class="video_all_screen" muted loop src="nkarner/best.mp4" type="video/mp4"></video>
+			<!-- <div class="aaaaa"></div> -->
 			<div class="header2-logo">
-				<a href="home.php"><img src="nkarner/logo.jpg" alt=""></a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+				  <a href="#section02">
+				<img src="nkarner/logo.jpg" alt="">
+				<p>Welcome to our virtual cinema M_Films.</p>
 				<section id="section01" class="demo">
-				  <a href="#section02"><span></span>&darr;</a>
+				  &darr;
 				</section>
+				</a>
 			</div>
 		</div>
 		<script type="text/javascript">
 			var vid = document.getElementById('_vidElement');
-			var vid_div = document.getElementById('vid-div');
-			vid_div.style.height = screen.height-1000;
+			// var vid_div = document.getElementById('vid-div');
+			// vid_div.style.height = screen.height-1000;
 			$(document).ready(function(){
 				if (vid.paused)
         			vid.play();				

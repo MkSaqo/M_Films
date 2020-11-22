@@ -29,8 +29,8 @@ include "tpl/connect.php";
 						$home_img = $result["home_img"];
 						?>
 					<div class="header_img"  onmouseover="a1(<?php echo $i-1?>)" onmouseout="b1(<?php echo $i-1?>)">
-						<img class="verjin_filmer_img" src="<?php echo $home_img; ?>">
 						<a href="film.php?id=<?php echo $id; ?>">
+						<img class="verjin_filmer_img" src="<?php echo $home_img; ?>">
 							<img class="header_play" src="nkarner/play.png">
 						</a>
 					</div>

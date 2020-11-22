@@ -1,6 +1,5 @@
 <?php include "functions.php" ;
  include "connect.php" ;
-pre($_GET);
 $link = $_SESSION['link'];
 if (isset($_POST['login']) ) {
     $email = $_POST['Lmail'];
@@ -20,12 +19,13 @@ if(isset($_GET['login'])){
     $r = mysqli_fetch_assoc(mysqli_query($db, $sql));
     if ($r) {
         $_SESSION['login'] = $r["email"];
-        header("Location: ../$link");
+        header("Location: ../home.php");
     }
 }
 if (isset($_POST['logout'])) {
     session_destroy();
     header("Location: ../$link");
 }	
+
 
 ?>

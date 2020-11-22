@@ -8,7 +8,7 @@
 							<?php 
 						} ?>
 						type="text" id="search" name="q" placeholder="Search"/>
-						<input class="submit" type="submit" value=" " />
+						<input class="submit" type="submit" value="search" />
 					</form>
 				</div>
 				<div class="film_r_top">
@@ -72,8 +72,8 @@
 										?>
 										<div class="qh">
 											<div class="right_img"  onmouseover="a2(<?php echo $i-1?>)" onmouseout="b2(<?php echo $i-1?>)">
-												<img class="right_imgs" src="<?php echo $r['home_img']; ?>">
 												<a href="film.php?id=<?php echo $r['id']; ?>">
+												<img class="right_imgs" src="<?php echo $r['home_img']; ?>">
 													<img class="right_play" src="nkarner/play.png">
 												</a>
 											</div>
@@ -104,8 +104,8 @@
 						?>
 						<div class="qh">
 							<div class="right_img"  onmouseover="a2(<?php echo $i-1?>)" onmouseout="b2(<?php echo $i-1?>)">
-								<img class="right_imgs" src="<?php echo $r['home_img']; ?>">
 								<a href="film.php?id=<?php echo $r['id']; ?>">
+								    <img class="right_imgs" src="<?php echo $r['home_img']; ?>">
 									<img class="right_play" src="nkarner/play.png">
 								</a>
 							</div>

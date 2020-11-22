@@ -2,8 +2,8 @@
 	<div class="index_s_l"  onmouseover="a(<?php echo $f-1?>)" onmouseout="b(<?php echo $f-1?>)">
 		<a href="film.php?id=<?php echo $id;?>">
 			<img class="play" src="nkarner/play.png" alt="">
-		</a>
 		<img  class="home" src="<?php echo $home_img ?>" alt="">
+		</a>
 		
 	</div>
 	

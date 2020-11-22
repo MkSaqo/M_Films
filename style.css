@@ -1,6 +1,4 @@
 body{
-	/*background-image: url("nkarner/0body_back.jpg");*/
-	/* background-image: url("https://i.redd.it/3lxlwac0rfmx.png"); */
 	background-attachment: fixed;
 	background-color: #202020;
 
@@ -110,18 +108,19 @@ a{
 	background-color: rgba(48,48,48,.5);
 	color: white;
 	margin-left: 250px;
-	height: 280px;
+	padding:20px;
 }
 .Rdiv input {
 	background-color: #303030;
 	border: 0;
 	margin-top: 15px;
-	height: 35px;
-	width: 270px;
 }
 .Rdiv span{
 	display: none;
 	color: red;
+}
+.Rdiv select{
+    color:black;
 }
 .Ldiv #lname, #lpass,#lsubmit{
 	width: 250px;
@@ -129,6 +128,10 @@ a{
 	/* color: white; */
 	/* background-color:black; */
 	font-size:25px;
+}
+#usrname{
+    color:white;
+    margin:0;
 }
 #Rsubmit{
 	font-size: 25px;
@@ -144,25 +147,52 @@ a{
 .footer p{
 	color: white;
 }
-.ib{
-	margin-left: 43px;
-	display: inline-block;
+
+
+.p_login_l{
+	margin-left:60px;
+	float:left;
+	color:white;
 }
-.p_login{
-	display: inline-block;
-    font-size: 21px;
+.p_login_r{
+	margin-right:60px;
+	color:white;
+	float:right;
 }
+
 .footer-form input {
-	width: 100%;
-	margin: 2px 0;
+	color:black;
+	margin-top: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+	text-align: center;
+}
+.ffi{
+	
+	margin-left: 25%;
+	width: 50%;
+}
+
+.ffsr,.ffs{
+	width: 40%;
+	margin-left: 25px;;
+	float:left;
 }
 .login{
+	padding:20px;
 	float: right;
 	background-color: rgba(48,48,48,.5);		
 	width: 400px;
 }
 .login * {
 	display: block;
+}
+.ib input{
+	margin-left: 15px;;
+	float: left;
+	display: inline-block;
+	width: 45%;
+
 }
 .Rdiv th {
 	width:200px;
@@ -177,7 +207,7 @@ a{
    }
 .black input:first-child {
 	position: absolute;
-	left: 50%;
+	left: 443px;
 	top: 50%;
 	font-size: 20px;
 	width: 200px;
@@ -186,8 +216,8 @@ a{
 	position: absolute;
 	background-color: cadetblue;
 	font-size: 20px;
-	left: 58%;
-	top: 54%;
+	left: 650px;
+	top: 50%;
 }
 /*___________________________ARTICLE___________________-*/
 
@@ -212,7 +242,7 @@ a{
 }
 .art_spisk .index_s_r{
 	padding-left: 40px;
-	width: 72%;
+	width: 71%;
 	color: white;
 }
 .art_gallery h2{
@@ -490,13 +520,13 @@ a{
 }
 
 .r_search .submit {
+    color:white;
 	margin-top: 10px;
 	cursor: pointer;
 	border: none;
-	background: url('http://thesuiteworld.com/wp-admin/maint/search-icon-white-png-540.png') no-repeat center center, #1E1E20;
+	background: url('nkarner/search.png') no-repeat center center, #1E1E20;
 	background-size: 30px 30px;
 	border-radius: 0 20px 20px 0;
-	padding: 15px 25px;
 	display: inline-block;
 	width: 70px;
 	height: 25px;
@@ -649,6 +679,8 @@ a{
 }
 .video_all_screen {
 	width: 100%;
+	height: 100%;
+	margin-top:-30px;
 }
 #vid-div {
 	position: relative;
@@ -658,12 +690,12 @@ a{
 	width: 300px;
 	height: 300px;
 	position: absolute;
-	top: 20%;
+	top: 35%;
 	left: 40%;	
 	transition: 0.8s;
 }
 .header2-logo img {
-	opacity: 0.7;
+	opacity: 0.3;
 	width: 300px;
 	height: 200px;
 	transition: 0.5s;
