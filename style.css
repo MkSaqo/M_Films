@@ -684,7 +684,7 @@ a{
 }
 #vid-div {
 	position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .header2-logo {
 	width: 300px;
@@ -692,27 +692,28 @@ a{
 	position: absolute;
 	top: 35%;
 	left: 40%;	
-	transition: 0.8s;
+	background-color: rgba(128,228,228,0.7);
 }
+
+.animate__animated.animate__flash {
+  --animate-duration: 5s;
+    animation-iteration-count: infinite;
+ 	animation-timing-function: ease-in;
+
+}
+
+
 .header2-logo img {
-	opacity: 0.3;
 	width: 300px;
 	height: 200px;
-	transition: 0.5s;
 }
 .header2-logo p {
 	text-align: center;
 	margin: 30px;
 	color: white;
-	opacity: 0.5;
-	transition: 0.5s;
 }
-.header2-logo:hover {
-	opacity: 1;
-	background-color: rgba(128,228,228,0.7);
-}
-.header2-logo:hover p {
-	opacity: 1;
+.header2-logo:hover,.animate__animated.animate__flash:hover {
+	animation-name: none;
 }
 .demo {
 	border-radius: 100%;
