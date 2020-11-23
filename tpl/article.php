@@ -1,15 +1,20 @@
-<article class="art_spisk">
-	<div class="index_s_l"  onmouseover="a(<?php echo $f-1?>)" onmouseout="b(<?php echo $f-1?>)">
+	<?php 
+	if($f%2==1)$anim = "left";
+	else $anim = "right";
+	?>
+<article  data-aos="fade-<?php echo $anim ?>"     data-aos-duration="1500" class="art_spisk">
+	<div class="index_s_l"  onmouseover="a(<?php echo $f-1?>,'play','home',true)" 
+							onmouseout="a(<?php echo $f-1?>,'play','home',false)">
 		<a href="film.php?id=<?php echo $id;?>">
 			<img class="play" src="nkarner/play.png" alt="">
-		<img  class="home" src="<?php echo $home_img ?>" alt="">
+			<img  class="home" src="<?php echo $home_img ?>" alt="">
 		</a>
 		
 	</div>
 	
-	<div class="index_s_r">
-		<a href="film.php?id=<?php echo $id; ?>"><h2><?php echo $name; ?></h2></a>
-		<div class="index_s_r_1">
+	<div  class="index_s_r">
+		<a href="film.php?id=<?php echo $id; ?>"><h2 class="animate__animated "><?php echo $name; ?></h2></a>
+		<div  class="index_s_r_1">
 		<?php
 		$arr = [$desc1,$desc2,$desc3,$desc4];
 		for($i=0;$i<4;$i++){
@@ -48,6 +53,5 @@
 		</p>
 	</div>
 	</div>
-	<a id="watch" href="film.php?id=<?php echo $id;?>"><div class="watch">Watch Now</div></a>
-	<div class="none"><a href="film.php?id=<?php echo $id ?>"><h2><?php echo $name; ?></h2></a></div>
+	<a  id="watch" href="film.php?id=<?php echo $id;?>"><div class="watch animate__animated">Watch Now</div></a>
 </article>

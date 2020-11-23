@@ -46,18 +46,7 @@
 			i--;
 			img.src = images[i];
 		}
-		function a2(a){
-			var play =  document.getElementsByClassName("right_play");
-			var home =  document.getElementsByClassName("right_imgs");
-			play[a].style.zIndex = 1;
-			home[a].style.opacity = 0.5;
-		}
-		function b2(a){
-			var play =  document.getElementsByClassName("right_play");
-			var home =  document.getElementsByClassName("right_imgs");
-			play[a].style.zIndex = -1;
-			home[a].style.opacity = 1;
-		}
+		
 		function a1(a){
 			var play =  document.getElementsByClassName("header_play");
 			var home =  document.getElementsByClassName("verjin_filmer_img");
@@ -77,6 +66,7 @@
 				var i = 0;
 				while(i<spisk.length){
 					spisk[0].className ="art_gallery";
+					$('.art_gallery').attr('data-aos',"a");
 				}
 			}, 300);
 		}
@@ -87,23 +77,28 @@
 				var i = 0;
 				while(i<gallery.length){
 					gallery[0].className ="art_spisk";
+					$('.art_gallery').attr('data-aos',"fade-right");
 				}
 			}, 300);
 			
 		}
-		function a(a){
-			var play =  document.getElementsByClassName("play");
-			var home =  document.getElementsByClassName("home");
-			play[a].style.zIndex = 1;
-			home[a].style.opacity = 0.5;
+		function a(a,name,home,show){
+			var play =  document.getElementsByClassName(name);
+			var home =  document.getElementsByClassName(home);
+			if (show){
+				play[a].style.zIndex = 1;
+				home[a].style.opacity = 0.5;
+			}
+			else{
+				play[a].style.zIndex = -1;
+				home[a].style.opacity = 1;
+
+			}
 		}
-		function b(a){
-			var play =  document.getElementsByClassName("play");
-			var home =  document.getElementsByClassName("home");
-			play[a].style.zIndex = -1;
-			home[a].style.opacity = 1;
-		}
+  AOS.init();
+
 
 	</script>
 	</body>
 </html>
+

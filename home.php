@@ -1,16 +1,11 @@
 <?php
 include "tpl/header2.php";
-include "tpl/connect.php";
-
 $i = 0;
 $f = 0;
 $filmCount = 6;
-if(isset($_GET['page'])){
-	$page = $_GET['page'];
-}
-else{
-	$page=1;
-}
+if(isset($_GET['page'])) $page = $_GET['page'];
+else $page=1;
+
 $sql1 = "SELECT COUNT(`id`) FROM `kinoner` ";
 $conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
 $sql = "SELECT * FROM `kinoner` WHERE `id` <=$conCount -  $page*$filmCount+$filmCount  ORDER BY `id` DESC";
@@ -22,17 +17,13 @@ $conn = mysqli_query($db, $sql);
 			<div class="change_js">
 				<div class="icon_gallery" onclick="gallery()"></div>
 				<div class="icon_spisk" onclick="spisk()"></div>
-				
 			</div>
 			<?php
 		while ($f++ < $filmCount) {	
 			if($result = mysqli_fetch_assoc($conn)){
 				include "tpl/var_data.php";
 				include "tpl/article.php";
-				?>
-				
-
-			<?php }}?>
+			}}?>
 			
 			<div class="pages">
 				<p><?php

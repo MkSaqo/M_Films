@@ -1,20 +1,14 @@
  <?php 
 include "functions.php";
 include "tpl/connect.php";
-// $sql = "SELECT * FROM `kinoner` ORDER BY `id` DESC ";
-// $conn = mysqli_query($db,$sql);
-// $i = 0;
-// while(++$i<8){
-// 	$result = mysqli_fetch_assoc($conn) ;
-// 	$id = $result["id"];
-// 	$home_img = $result["home_img"];
-// }
 ?>
 <!DOCTYPE html>
 <html class="html_filmer1">
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  		
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="icon" href="nkarner/logo.jpg">
@@ -25,10 +19,10 @@ include "tpl/connect.php";
 		<div id="vid-div">
 			<video id="_vidElement" class="video_all_screen" muted loop src="nkarner/best.mp4" type="video/mp4"></video>
 			<a href="#section02">
-				<div class="header2-logo animate__animated animate__flash">
+				<div  class="header2-logo animate__animated animate__flash">
 					<img src="nkarner/logo.jpg" alt="">
 					<p>Welcome to our virtual cinema M_Films.</p>
-					<section class="demo">&darr;</section>
+					<section class="demo"><b>&darr;</b></section>
 				</div>
 			</a>
 		</div>

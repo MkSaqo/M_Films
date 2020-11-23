@@ -274,6 +274,7 @@ a{
 	height: 30px;
 	background-size: cover;
 	margin-left: 10px;
+	cursor: pointer;
 }
 .change_js{
 	/* height: 0; */
@@ -314,7 +315,12 @@ a{
 	text-decoration: none;
 }
 .index_s_r h2{
-	text-align: center
+	text-align: center;
+	margin-top: 0;
+}
+.index_s_r h2:hover{
+	animation-name: pulse;
+	color: green;
 }
 .index_s_r p {
 	margin:6px 40px 6px 0;
@@ -324,11 +330,16 @@ a{
 	display: inline-block;
 	vertical-align: top;
 }
+.index_s_r a{
+	color:aquamarine;
+}
+
 .index_desc{
 	padding-right: 50px;
 	text-align: justify;
 	margin-top: 20px;
 }
+
 .art_spisk .watch{
 	padding: 10px;
 	margin-top: -18px;
@@ -338,12 +349,11 @@ a{
 	letter-spacing: 4px;
 	cursor: pointer;
 	background: #2D2F33;
-	transition: 0.5s;
 }
 .art_spisk .watch:hover {
 	background-color: #4bb543;
-	color: white !important;
-	letter-spacing: 0;
+	color: white;
+	animation-name: pulse;
 }
 #watch{
 	color: white;
@@ -377,7 +387,7 @@ a{
 .right_imgs{
 	position: absolute;
 	height: 200px;
-	width: 129px;
+	width: 150px;
 	overflow: auto;
 	z-index: 1;
 }
@@ -491,12 +501,13 @@ a{
 	width: 45%;
 	display: inline-block;
 	margin-left: 17px;
+	margin-bottom: 17px;
 }
 .qh p{
 	text-align: center;
 }
 .film_r_bottom p{
-	margin: 0 0 10px 0 ;
+	margin: 10px;
 
 }
 
@@ -510,27 +521,29 @@ a{
 .r_search .search {
 	margin-left: 40px;
 	margin-top: 10px;
-	font-size: 15px;
-	width: 60%;
-	height: 25px;
+	font-size: 18px;
+	/*width: 60%;*/
+	height: 39px;
 	padding-left: 10px;
-	background-color: rgba(48, 48, 48, .5);
+	background-color: dimgrey;
+	border-radius: 20px;
 	border: 0;
 	color: white;
 }
-
-.r_search .submit {
-    color:white;
-	margin-top: 10px;
-	cursor: pointer;
-	border: none;
-	background: url('nkarner/search.png') no-repeat center center, #1E1E20;
-	background-size: 30px 30px;
-	border-radius: 0 20px 20px 0;
-	display: inline-block;
-	width: 70px;
-	height: 25px;
+.search::placeholder{
+	color: white;
 }
+.r_search .submit {
+	color: indigo;
+    margin-top: 11px;
+    margin-left: 15px;
+    cursor: pointer;
+    border: none;
+    background-size: 30px 30px;
+    border-radius: 0 20px 20px 0;
+    display: inline-block;
+    background: lightblue;
+    height: 34px;}
 
 /* ______________________________SEARCH______________________________ */
 .search h2,.index_left h2,.nof{	
@@ -826,3 +839,23 @@ a{
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,13 +2,11 @@
 				<div class="r_search">
 					<form action="search.php" method="get">
 						<input class="search"
-						<?php if(isset($_GET['q'])){
-							?>
+						<?php if(isset($_GET['q'])){?>
 							value="<?php echo $_GET['q']?>"
-							<?php 
-						} ?>
+						<?php } ?>
 						type="text" id="search" name="q" placeholder="Search"/>
-						<input class="submit" type="submit" value="search" />
+						<input class="submit" type="submit" value="Search" />
 					</form>
 				</div>
 				<div class="film_r_top">
@@ -70,8 +68,10 @@
 										$arr[]=$r["id"];
 										$i++;
 										?>
-										<div class="qh">
-											<div class="right_img"  onmouseover="a2(<?php echo $i-1?>)" onmouseout="b2(<?php echo $i-1?>)">
+										<div data-aos="zoom-in-down" class="qh">
+											<div class="right_img"  onmouseover="a(<?php echo $i-1?>,'right_play','right_imgs',true)" 
+																	onmouseout="a(<?php echo $i-1?>,'right_play','right_imgs',false)">
+
 												<a href="film.php?id=<?php echo $r['id']; ?>">
 												<img class="right_imgs" src="<?php echo $r['home_img']; ?>">
 													<img class="right_play" src="nkarner/play.png">
@@ -81,7 +81,6 @@
 												<p><?php echo $r['name'] ?></p>
 											</a>
 										</div>
-										
 										<?php 
 									}
 								}
@@ -102,8 +101,9 @@
 					if($bool){
 						$i++;
 						?>
-						<div class="qh">
-							<div class="right_img"  onmouseover="a2(<?php echo $i-1?>)" onmouseout="b2(<?php echo $i-1?>)">
+						<div data-aos="zoom-in-down" class="qh">
+							<div class="right_img"  onmouseover="a(<?php echo $i-1?>,'right_play','right_imgs',true)" 
+													onmouseout="a(<?php echo $i-1?>,'right_play','right_imgs',false)">
 								<a href="film.php?id=<?php echo $r['id']; ?>">
 								    <img class="right_imgs" src="<?php echo $r['home_img']; ?>">
 									<img class="right_play" src="nkarner/play.png">
