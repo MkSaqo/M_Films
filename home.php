@@ -1,16 +1,12 @@
 <?php
 include "tpl/header2.php";
+require 'class/HomeFilm.php';
 $i = 0;
 $f = 0;
 $filmCount = 6;
 if(isset($_GET['page'])) $page = $_GET['page'];
 else $page=1;
-
-$sql1 = "SELECT COUNT(`id`) FROM `kinoner` ";
-$conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
-$sql = "SELECT * FROM `kinoner` WHERE `id` <=$conCount -  $page*$filmCount+$filmCount  ORDER BY `id` DESC";
-$conn = mysqli_query($db, $sql);
-
+$kino = new HomeFilm($page);
 ?>
 	<div class="container1">
 		<div class="index_left">
@@ -20,14 +16,14 @@ $conn = mysqli_query($db, $sql);
 			</div>
 			<?php
 		while ($f++ < $filmCount) {	
-			if($result = mysqli_fetch_assoc($conn)){
+			if($result = mysqli_fetch_assoc($kino->getData1())){
 				include "tpl/var_data.php";
 				include "tpl/article.php";
 			}}?>
 			
 			<div class="pages">
 				<p><?php
-				for($i = 1;$i<=ceil($conCount/$filmCount);$i++){?>	
+				for($i = 1;$i<=ceil($kino->getCount()/$filmCount);$i++){?>	
 					<a href="?page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
 				<?php }?>
 				</p>

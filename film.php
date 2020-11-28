@@ -1,29 +1,26 @@
-<?php
-//    include "tpl/header.php";
-//    include "tpl/footer.php";
-//    die();	
+<?php 
    include "tpl/header.php";
-   include "tpl/connect.php";
+   require "class/Kino.php";
+
    $a = $_GET["id"];
-   $sql = "SELECT * FROM `kinoner` WHERE `id` = $a ";
-   $conn = mysqli_query($db, $sql);
-   $result = mysqli_fetch_assoc($conn);
-   include "tpl/var_data.php";
-   
+   $kino = new Kino($a);
+   $getData1 = $kino->getData1();
    ?>
 <div class="container1">
 	<div class="film_art">
 		<div class="film_left">
-			<?php if(isset($result)){?>
+   
+		<?php if(isset($getData1)){ ?>	
+
 			<div class="film_content">
 				<div class="film_home_img">
-					<img src="<?php echo $home_img; ?>" alt="">
+					<img src="<?php echo $kino->home_img; ?>" alt="">
 				</div>
 				<div class="film_table">
-					<h1><?php echo $name; ?></h1>
+					<h1><?php echo $kino->name; ?></h1>
 					<table>
 					<?php 
-						$arr = [$desc1,$desc2,$desc3,$desc4];
+						$arr = [$kino->desc1,$kino->desc2,$kino->desc3,$kino->desc4];
 						for($i=0;$i<4;$i++){
 							$descArr = explode(":",$arr[$i]);
 							if($descArr[1]){?>
@@ -35,28 +32,28 @@
 						} ?>
 					<tr>
 						<th>Status </th>
-						<td>: <?php echo $status; ?></td>
+						<td>: <?php echo $kino->status; ?></td>
 					</tr>
 					<tr>
 						<th>Time </th>
-						<td>: <?php echo $time; ?></td>
+						<td>: <?php echo $kino->time; ?></td>
 					</tr>
 					<tr>
 						<th>Budget </th>
-						<td>: <?php echo $budget; ?></td>
+						<td>: <?php echo $kino->budget; ?></td>
 					</tr>
 					<tr>
 						<th>Revenue </th>
-						<td>: <?php echo $revenue; ?></td>
+						<td>: <?php echo $kino->revenue; ?></td>
 					</tr>
 					<tr>
 						<th>Year </th>
 						<td>:
 						<?php 
-						if(isset(explode(" ",$relase)[1])){
-							$y = explode(" ",$relase);
-							if(isset(explode(",",$relase)[1])){
-								$y[] = $relase[1];
+						if(isset(explode(" ",$kino->relase)[1])){
+							$y = explode(" ",$kino->relase);
+							if(isset(explode(",",$kino->relase)[1])){
+								$y[] = $kino->relase[1];
 							}
 						
 						} 
@@ -64,12 +61,12 @@
 					</tr>
 					<tr>
 						<th>Language </th>
-						<td>: <?php echo $lang; ?></td>
+						<td>: <?php echo $kino->lang; ?></td>
 					</tr>
 					<tr>
 						<th>Genres </th>
 						<td>: <?php 
-							$genres = explode(",",$genres);
+							$genres = explode(",",$kino->genres);
 							for($i = 0;$i<count($genres);$i++){
 								?>
 							<a href="genre.php?genre=<?php echo($genres[$i]); ?>"><?php echo($genres[$i]);
@@ -83,21 +80,21 @@
 					</tr>
 					<tr>
 						<th>By </th>
-						<td>: <?php echo $from; ?> </td>
+						<td>: <?php echo $kino->from; ?> </td>
 					</tr>
 					</table>
 				</div>
 				<div class="film_desc">
-					<p><?php echo $desc ?></p>
+					<p><?php echo $kino->desc ?></p>
 				</div>
 				<div class="film_trailer">
-					<?php echo $trailer; ?>
+					<?php echo $kino->trailer; ?>
 				</div>
 			</div>
 			<div class="film_glavn">
 				<h1>Top Billed Cast</h1>
-				<?php $glavnArr = [$glavnin0,$glavnin1,$glavnin2,$glavnin3,$glavnin4] ?>
-				<?php $glavnArr1 = [$glavni0,$glavni1,$glavni2,$glavni3,$glavni4] ?>
+				<?php $glavnArr = [$kino->glavnin0,$kino->glavnin1,$kino->glavnin2,$kino->glavnin3,$kino->glavnin4] ?>
+				<?php $glavnArr1 = [$kino->glavni0,$kino->glavni1,$kino->glavni2,$kino->glavni3,$kino->glavni4] ?>
 				<?php 
 					for($i = 0;$i<count($glavnArr);$i++){
 						?>
@@ -114,9 +111,9 @@
 				<script>
 					var i = 0;
 					var images =
-					<?php echo "['".$nkar1."','".$nkar2."','".$nkar3."','".$nkar4."','".$nkar5."','".$nkar6."','".$nkar7."','".$nkar8."','".$nkar9."','".$nkar10."']";?>;
+					<?php echo "['".$kino->nkar1."','".$kino->nkar2."','".$kino->nkar3."','".$kino->nkar4."','".$kino->nkar5."','".$kino->nkar6."','".$kino->nkar7."','".$kino->nkar8."','".$kino->nkar9."','".$kino->nkar10."']";?>;
 				</script>
-				<img id="playerImg" src="<?php echo $nkar1; ?>" width = "100%" height="500px" alt="">
+				<img id="playerImg" src="<?php echo $kino->nkar1; ?>" width = "100%" height="500px" alt="">
 			</div>
 			<?php include "tpl/comments.php" ;
 				}else{
