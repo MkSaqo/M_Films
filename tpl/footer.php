@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 			$_SESSION["link"] = explode("/",$_SERVER["SCRIPT_NAME"])[2];
 			?>
 			<div class="footer">

@@ -1,9 +1,8 @@
 <?php 
    include "tpl/header.php";
-   require "class/Kino.php";
 
    $a = $_GET["id"];
-   $kino = new Kino($a);
+   $kino = new Kino($a,$db);
    $getData1 = $kino->getData1();
    ?>
 <div class="container1">

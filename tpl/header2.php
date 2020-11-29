@@ -16,6 +16,15 @@ include "tpl/connect.php";
 		<title>M_Films</title>
 	</head>
 	<body>
+		<?php 
+			if(isset($_SESSION['login'])){
+			?>
+				<h1 class ='hello'>Welcom <?php echo $_SESSION['login'] ?></h1>
+			
+			<?php	
+			}
+
+		 ?>
 		<div id="vid-div">
 			<video id="_vidElement" class="video_all_screen" muted loop src="nkarner/best.mp4" type="video/mp4"></video>
 			<a href="#section02">

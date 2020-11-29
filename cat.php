@@ -1,73 +1,66 @@
 <?php
-include "tpl/header.php";
-include "tpl/connect.php";
-
-$i = 0;
-$f = 0;
-$filmCount = 6;
-if(isset($_GET["page"])){
-   $page= $_GET["page"];
-}
-else{
+    include "tpl/header.php";
+    
+    $i = 0;
+    $f = 0;
+    $filmCount = 6;
+    if(isset($_GET["page"])) {
+    
+    $page= $_GET["page"];
+    } 
+    else{
+    
     $page= 1;
-
-}
-if(isset($_GET['Y'])){
-    $pageY = $_GET['Y'];
-    $limit1=$page*$filmCount-$filmCount;
-    $limit2=$page*$filmCount;
-    $sql = "SELECT * FROM `kinoner` WHERE `relase` LIKE '%$pageY%'  LIMIT $limit1,$limit2";
-    $sql1 = "SELECT COUNT(`id`) FROM `kinoner`  WHERE `relase` LIKE '%$pageY%'";
-}
-else if(isset($_GET['G'])){
-    $limit1=$page*$filmCount-$filmCount;
-    $limit2=$page*$filmCount;
-    $pageG = $_GET['G'];
-    $sql = "SELECT * FROM `kinoner` WHERE `genres` LIKE '%$pageG%'  LIMIT $limit1,$limit2";
-    $sql1 = "SELECT COUNT(`id`) FROM `kinoner`  WHERE `genres` LIKE '%$pageG%'";
-}
-$conCount = mysqli_fetch_assoc(mysqli_query($db,$sql1))["COUNT(`id`)"];
-$conn = mysqli_query($db, $sql);
-$result = mysqli_fetch_assoc($conn);
-?>
-
-	<div class="container1">
-		<div class="index_left">
-        <?php if(isset($result)){?>
-
-            <div class="change_js">
-				<div class="icon_gallery" onclick="gallery()"></div>
-				<div class="icon_spisk" onclick="spisk()"></div>
-				
-			</div>
-			<?php
-            if(isset($pageG) || isset($pageY)){
-                while ($f++ < $filmCount) {	
-                    if($result){
-                        include "tpl/var_data.php";
-                        include "tpl/article.php";
-                        $result = mysqli_fetch_assoc($conn)
-                        ?>
-                        
-                <?php }}}?>
-        <div class="pages">
-            <p><?php
-            for($i = 1;$i<=ceil($conCount/$filmCount);$i++){
-                ?>
-                <a href="
-                <?php if(isset($pageG)){?>
-                ?G=<?php echo $pageG;
-                }else{?>
-                ?Y=<?php echo $pageY;
-                }
-                ?>&page=<?php echo $i;?>"><span><?php echo $i; ?></span></a>
-            
-            <?php }?>
-            </p>
-        </div>
-            <?php }else{?>
-                <h2>No selected category</h2>
-                <?php } ?>
+    } 
+    
+    if(isset($_GET['Y'])){
+        $page1 = $_GET['Y'];
+        $why = "relase";
+        $limit1=$page*$filmCount-$filmCount;
+        $limit2=$page*$filmCount;
+    }
+    
+    else if(isset($_GET['G'])){
+        $limit1=$page*$filmCount-$filmCount;
+        $limit2=$page*$filmCount;
+        $page1 = $_GET['G'];
+        $why = "genres";
+    }
+        $countFilms = Kino::getCountCategory($db,$why ,$page1);
+        $categoryCount = Kino::getCategory($db,$why,$page1,$limit1,$limit2);
+    ?>
+<div class="container1">
+<div class="index_left">
+    <?php if($countFilms !=0){
+        ?>
+    <div class="change_js">
+        <div class="icon_gallery" onclick="gallery()"></div>
+        <div class="icon_spisk" onclick="spisk()"></div>
     </div>
+    <?php
+        if(isset($page)){
+            ?><h2>Number of movies found: <?php echo($countFilms) ?></h2><?php
+            while ($f < count($categoryCount)) {
+            $kino = new Kino($categoryCount[$f],$db);
+                if($kino){
+                    include "tpl/article.php";
+                    $f++;
+                    ?>
+    <?php }
+    }
+}?>
+    <div class="pages">
+        <p><?php
+            for($i = 1;$i<=ceil($countFilms/$filmCount);$i++){
+                ?>
+            <a href="<?php echo $_SERVER['REQUEST_URI'].'&page='.$i?>">
+            <span><?php echo $i; ?></span></a>
+            <?php }?>
+        </p>
+    </div>
+    <?php }else{?>
+    <h2>No selected category or no film found</h2>
+    <?php } ?>
+</div>
 <?php include "tpl/right.php" ;?>
 <?php include "tpl/footer.php"?>

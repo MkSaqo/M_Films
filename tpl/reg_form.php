@@ -26,6 +26,10 @@ if (isset($_POST['login3'])) {
                 <th><label for="Rimage">img:</label></th>
                 <td><input type="file" name="Rimage" id="Rimage" title="sa"><br></td>
             </tr>
+            <tr>
+                <th><label for="pass">Password:</label></th>
+                <td><input type="password" name="pass" id="Rpass" required="" title="sa"><br></td>
+            </tr>
         </table>
 
 
@@ -61,7 +65,6 @@ else if(isset($_POST["end"])){
 else {
     ?>
        <input type="email" name="email"><span>email registred</span><br>
-       <input type="password" required name="pass"><br>
        <input type="submit" value="Send" name="login1" id="Rsubmit">
 
 <?php }?>

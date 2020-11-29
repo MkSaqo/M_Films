@@ -1,6 +1,5 @@
 <?php
 include "tpl/header.php";
-include "tpl/connect.php";
 $link = $_SESSION['link'];
 $root = $_SESSION['login'];
 ?>

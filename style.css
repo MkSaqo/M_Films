@@ -40,12 +40,21 @@ a{
 	text-decoration: none;
 	transition: .3s;
 }
+.green{
+	color: green;
+}
 /*<!-- _________________________SITE________________________ -->*/
 .site{
 	width: 1300px;
 	margin: auto;
 }
-
+.hello{
+	    color: white;
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    z-index: 1;
+}
 /*__________________________HEADER________________________*/
 .header{
 	padding-right:  10px;

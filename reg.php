@@ -1,6 +1,5 @@
 <?php
 include "tpl/header.php";
-include "tpl/connect.php";
 $month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 $dateY = date("Y");
 
@@ -58,7 +57,7 @@ if (isset($_POST['login2'])){
 }
 if(isset($_POST["login1"])){
     $rmail = $_POST['email'];
-    $pass = $_POST['pass'];
+    // $pass = $_POST['pass'];
     $sql = "SELECT `id` FROM `users` WHERE `email` ='$rmail' ";
     $r = mysqli_fetch_assoc(mysqli_query($db,$sql));
     if($r){
@@ -66,11 +65,11 @@ if(isset($_POST["login1"])){
     else{
         $subject = "Code verification";
         $message = rand(1000,9999);
-        $headers = 'CC: sargis.mkrtchyan1.y@tumo.org';
+        $headers = 'CC: sargis.mkrtchyan1.m@gmail.com';
         mail($rmail,$subject,$message,$headers);
         pre($message);
         $_SESSION["rmail"] = $rmail;
-        $_SESSION["pass"] = $pass;
+        // $_SESSION["pass"] = $pass;
         $_SESSION["code"] = $message;
     ?>
     <form class="black" method="post">

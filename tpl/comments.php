@@ -7,15 +7,18 @@
     </form>
    <span id="comment_message"></span><br/>
    <div id="display_comment"></div>
-    
 </div>
     <script>
 $(document).ready(function(){
  
  $('#comment_form').on('submit', function(event){
-  <?php $_SESSION["comm_id"]=$id; ?>
+
+  <?php $_SESSION["comm_id"]=$_GET['id']; ?>
+
   event.preventDefault();
+
 <?php if(isset($_SESSION["login"])){?>
+
   var form_data = $(this).serialize();
   $.ajax({
    url:"tpl/add_comment.php",
