@@ -1,18 +1,52 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 4.9.5deb2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 01, 2018 at 10:52 AM
--- Server version: 5.7.22-0ubuntu0.17.10.1
--- PHP Version: 5.5.9-1ubuntu4.25
+-- Generation Time: Nov 30, 2020 at 03:11 AM
+-- Server version: 10.3.25-MariaDB-0ubuntu0.20.04.1
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `Filmer`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` int(255) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `filmId` int(200) NOT NULL,
+  `comment` varchar(400) NOT NULL,
+  `date` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `name`, `filmId`, `comment`, `date`) VALUES
+(1, 'root', 1, 'arajin comment', '2018-05-31 1:19:52'),
+(12, 'root', 1, 'erkrord com', '2020-11-30 0:31:57'),
+(15, 'root', 1, 'errord', '2020-11-30 0:53:28'),
+(16, 'root', 0, 'arajin', '2020-11-30 1:14:41'),
+(17, 'root', 0, 'erkrord', '2020-11-30 1:14:47'),
+(20, 'root', 17, 'logan\r\n', '2020-11-30 3:04:56');
 
 -- --------------------------------------------------------
 
@@ -67,7 +101,7 @@ CREATE TABLE `kinoner` (
 
 INSERT INTO `kinoner` (`id`, `name`, `desc`, `desc1`, `desc2`, `desc3`, `desc4`, `glavnin0`, `glavnin1`, `glavnin2`, `glavnin3`, `glavnin4`, `glavni0`, `glavni1`, `glavni2`, `glavni3`, `glavni4`, `home_img`, `status`, `relase`, `time`, `budget`, `revenue`, `genres`, `trailer`, `nkar1`, `nkar2`, `nkar3`, `nkar4`, `nkar5`, `nkar6`, `nkar7`, `nkar8`, `nkar9`, `nkar10`, `lang`, `comments`, `from`) VALUES
 (0, 'Avengers: Infinity War', 'As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.', 'Director:Joe Russo', 'Director:Anthony Russo', 'Screenplay:Stephen McFeely', 'Screenplay:Christopher Markus', 'nkarner/Robert.jpg', 'nkarner/Chris.jpg', 'nkarner/Mark.jpg', 'nkarner/Chris.jpg', 'nkarner/Scarlett.jpg', 'Robert Downey Jr. Tony Stark / Iron Man', 'Chris Hemsworth Thor', 'Mark Ruffalo Bruce Banner / Hulk', 'Chris Evans Steve Rogers / Captain America', 'Scarlett Johansson Natasha Romanoff / Black Widow', 'nkarner/Avengers: Infinity War.jpg', 'Released', 'April 23, 2018', '2h 29m', '$300,000,000.00', '$1,607,279,083.00', 'Adventure,Science Fiction,Fantasy,Action', '<iframe src=\"https://www.youtube.com/embed/6ZfuNTqbHE8\" frameborder=\"0\"></iframe>', 'nkarner/AvengersInfinityWar1.jpg', 'nkarner/AvengersInfinityWar2.jpg', 'nkarner/AvengersInfinityWar3.jpg', 'nkarner/AvengersInfinityWar4.jpg', 'nkarner/AvengersInfinityWar5.jpg', 'nkarner/AvengersInfinityWar6.jpg', 'nkarner/AvengersInfinityWar7.jpg', 'nkarner/AvengersInfinityWar8.jpg', 'nkarner/AvengersInfinityWar9.jpg', 'nkarner/AvengersInfinityWar10.jpg', 'English', ' ___com___hello ___name___root ___date___2018-05-29 17:38:59___com___a ___name___root ___date___2018-05-29 17:43:06___com___saqw ___name___root ___date___2018-05-29 17:48:10___com___as ___name___root ___date___2018-05-29 17:48:34', 'root'),
-(1, 'Fifty Shades Freed', 'Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins.', 'Novel:E.L. James', 'Screenplay:Niall Leonard', 'Director:James Foley', ':', 'nkarner/Dakota.jpg', 'nkarner/Jamie.jpg', 'nkarner/Eric.jpg', 'nkarner/Arielle.jpg', 'nkarner/Brant.jpg', 'Dakota Johnson Anastasia Steele', 'Jamie Dornan Christian Grey', 'Eric Johnson Jack Hyde', 'Arielle Kebbel Gia Matteo', 'Brant Daugherty Luke Sawyer', 'nkarner/Fifty Shades Freed.jpg', 'Released', 'February 9, 2018 ', '1h 45m', '$55,000,000.00', '$136,906,000.00', 'Drama,Romance', '<iframe src=\"https://www.youtube.com/embed/nJCc5HRPxYA\" frameborder=\"0\"></iframe>', 'nkarner/FiftyShadesFreed1.jpg', 'nkarner/FiftyShadesFreed2.jpg', 'nkarner/FiftyShadesFreed3.jpg', 'nkarner/FiftyShadesFreed4.jpg', 'nkarner/FiftyShadesFreed5.jpg', 'nkarner/FiftyShadesFreed6.jpg', 'nkarner/FiftyShadesFreed7.jpg', 'nkarner/FiftyShadesFreed8.jpg', 'nkarner/FiftyShadesFreed9.jpg', 'nkarner/FiftyShadesFreed10.jpg', 'English', ' ___com___gazanaguyn film ___name___root ___date___2018-05-29 18:28:42___com___axr shat lavna ___name___root ___date___2018-05-29 18:28:53___com___մէ հրաշք կինո\r\n ___name___root ___date___2018-05-29 18:29:04', 'root'),
+(1, 'Fifty Shades Freed', 'Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins.', 'Novel:E.L. James', 'Screenplay:Niall Leonard', 'Director:James Foley', ':', 'nkarner/Dakota.jpg', 'nkarner/Jamie.jpg', 'nkarner/Eric.jpg', 'nkarner/Arielle.jpg', 'nkarner/Brant.jpg', 'Dakota Johnson Anastasia Steele', 'Jamie Dornan Christian Grey', 'Eric Johnson Jack Hyde', 'Arielle Kebbel Gia Matteo', 'Brant Daugherty Luke Sawyer', 'nkarner/Fifty Shades Freed.jpg', 'Released', 'February 9, 2018 ', '1h 45m', '$55,000,000.00', '$136,906,000.00', 'Drama,Romance', '<iframe src=\"https://www.youtube.com/embed/nJCc5HRPxYA\" frameborder=\"0\"></iframe>', 'nkarner/FiftyShadesFreed1.jpg', 'nkarner/FiftyShadesFreed2.jpg', 'nkarner/FiftyShadesFreed3.jpg', 'nkarner/FiftyShadesFreed4.jpg', 'nkarner/FiftyShadesFreed5.jpg', 'nkarner/FiftyShadesFreed6.jpg', 'nkarner/FiftyShadesFreed7.jpg', 'nkarner/FiftyShadesFreed8.jpg', 'nkarner/FiftyShadesFreed9.jpg', 'nkarner/FiftyShadesFreed10.jpg', 'English', ' ___com___gazanaguyn film ___name___root ___date___2018-05-29 18:28:42___com___axr shat lavna ___name___root ___date___2018-05-29 18:28:53___com___մէ հրաշք կինո\r\n ___name___root ___date___2018-05-29 18:29:04___com___z ___name___root ___date___2020-11-30 0:15:02___com___s ___name___root ___date___2020-11-30 0:15:50___com___as ___name___root ___date___2020-11-30 0:16:47___com___as ___name___root ___date___2020-11-30 0:16:47___com___as ___name___root ___date___2020-11-30 0:16:47___com___as ___name___root ___date___2020-11-30 0:16:48___com___as ___name___root ___date___2020-11-30 0:16:48___com___as ___name___root ___date___2020-11-30 0:16:48___com___as ___name___root ___date___2020-11-30 0:16:49___com___as ___name___root ___date___2020-11-30 0:16:49___com___as ___name___root ___date___2020-11-30 0:16:49___com___as ___name___root ___date___2020-11-30 0:16:49___com___asas ___name___root ___date___2020-11-30 0:18:26___com___asas ___name___root ___date___2020-11-30 0:18:26___com___asas ___name___root ___date___2020-11-30 0:18:26___com___asas ___name___root ___date___2020-11-30 0:18:27___com___asas ___name___root ___date___2020-11-30 0:18:27___com___asas ___name___root ___date___2020-11-30 0:18:28___com___aa ___name___root ___date___2020-11-30 0:18:45___com___aa ___name___root ___date___2020-11-30 0:18:46___com___aa ___name___root ___date___2020-11-30 0:18:46___com___aa ___name___root ___date___2020-11-30 0:18:46___com___aa ___name___root ___date___2020-11-30 0:18:47___com___aa ___name___root ___date___2020-11-30 0:18:47___com___aaa ___name___root ___date___2020-11-30 0:18:58', 'root'),
 (2, 'Black Panther', 'King TChalla returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his countrys new leader. However, TChalla soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, TChalla assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan special forces) and an American secret agent, to prevent Wakanda from being dragged into a world war.', 'Director, Screenplay:Ryan Coogler', 'Screenplay:Joe Robert Cole', ':', ':', 'nkarner/Chadwick.jpg', 'nkarner/Michael.jpg', 'nkarner/Lupita.jpg', 'nkarner/Danai.jpg', 'nkarner/Martin.jpg', 'Chadwick Boseman TChalla / Black Panther', 'Michael B. Jordan N’Jadaka / Erik Killmonger', 'Lupita Nyongo Nakia', 'Danai Gurira Okoye', 'Martin Freeman Everett K. Ross', 'nkarner/Black Panther.jpg', 'Released', 'January 29, 2018', '2h 14m', '$200,000,000.00', '$1,341,379,495.00', 'Action,Adventure,Fantasy,Science Fiction', '<iframe src=\"https://www.youtube.com/embed/xjDjIWPwcPU\" frameborder=\"0\"></iframe>', 'nkarner/BlackPanther1.jpg', 'nkarner/BlackPanther2.jpg', 'nkarner/BlackPanther3.jpg', 'nkarner/BlackPanther4.jpg', 'nkarner/BlackPanther5.jpg', 'nkarner/BlackPanther6.jpg', 'nkarner/BlackPanther7.jpg', 'nkarner/BlackPanther8.jpg', 'nkarner/BlackPanther9.jpg', 'nkarner/BlackPanther10.jpg', 'English', ' ', 'root'),
 (3, 'Zootopia', 'Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopias police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery.', 'Screenplay, Story:Phil Johnston', 'Director, Story:Rich Moore', 'Director, Story:Byron Howard', 'Screenplay, Story:Jared Bush', 'nkarner/Jason.jpg', 'nkarner/ShakiraGazelle.jpg', 'nkarner/Idris.jpg', 'nkarner/Octavia.jpg', 'nkarner/J.K..jpg', 'Jason Bateman Nick Wilde (voice)', 'Shakira Gazelle (voice)', 'Idris Elba Chief Bogo (voice)', 'Octavia Spencer Mrs. Otterton (voice)', 'J.K. Simmons Mayor Leodore Lionheart (voice)', 'nkarner/Zootopia.jpg', 'Released', 'March  4, 2016', '1h 48m', '$150,000,000.00', '$1,023,784,195.00', 'Animation,Adventure,Family,Comedy', '<iframe src=\"https://www.youtube.com/embed/jWM0ct-OLsM\" frameborder=\"0\"></iframe>', 'nkarner/Zootopia1.jpg', 'nkarner/Zootopia2.jpg', 'nkarner/Zootopia3.jpg', 'nkarner/Zootopia4.jpg', 'nkarner/Zootopia5.jpg', 'nkarner/Zootopia6.jpg', 'nkarner/Zootopia7.jpg', 'nkarner/Zootopia8.jpg', 'nkarner/Zootopia9.jpg', 'nkarner/Zootopia10.jpg', 'English', ' ___com___qww ___name___root ___date___2018-05-29 19:18:24', 'root'),
 (4, 'Thor: Ragnarok', 'Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the prophecy of destruction to his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.', 'Writer:Eric Pearson', 'Writer:Christopher Yost', 'Story:Stephany Folsom', 'Writer:Craig Kyle', 'nkarner/Chris.jpg', 'nkarner/Tom.jpg', 'nkarner/Cate.jpg', 'nkarner/Mark.jpg', 'nkarner/Tessa.jpg', 'Chris Hemsworth Thor Odinson', 'Tom Hiddleston Loki', 'Cate Blanchett Hela', 'Mark Ruffalo Bruce Banner / The Hulk', 'Tessa Thompson Brunnhilde / Valkyrie', 'nkarner/Thor: Ragnarok.jpg', 'Released', 'October 10, 2017', '2h 10m', '$180,000,000.00', '$853,977,126.00', 'Action,Adventure,Fantasy,Science Fiction', '<iframe src=\"https://www.youtube.com/embed/ue80QwXMRHg\" frameborder=\"0\"></iframe>', 'nkarner/ThorRagnarok1.jpg', 'nkarner/ThorRagnarok2.jpg', 'nkarner/ThorRagnarok3.jpg', 'nkarner/ThorRagnarok4.jpg', 'nkarner/ThorRagnarok5.jpg', 'nkarner/ThorRagnarok6.jpg', 'nkarner/ThorRagnarok7.jpg', 'nkarner/ThorRagnarok8.jpg', 'nkarner/ThorRagnarok9.jpg', 'nkarner/ThorRagnarok10.jpg', 'English', ' ', 'root'),
@@ -112,13 +146,19 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fname`, `lname`, `year`, `mouth`, `day`, `films`, `img`, `gender`, `email`, `phone`, `about`, `pass`) VALUES
-(1, 'Sargis', 'Mkrtchyan', 2000, 'Январь', 19, '', 'nkarner/sargis.mkrtchyan1.m@gmail.com.jpg', 'male', 'sargis.mkrtchyan1.m@gmail.com', '37498941429', 'es cnvel em ...... ...... ...', 'a'),
 (2, 'root', 'root', 2018, 'Январь', 1, '', 'nkarner/root.png', 'male', 'root', '1212121212', 'ROOOOOOOOOOOOOOOOOOOT', 'root'),
-(11, 'Sas', 'sa', 2018, 'January', 1, '', 'nkarner/noimg2.jpg ', 'male', 'sargis.mkrtchyan1.y@tumo.org', '121', 'asas', 'a');
+(11, 'Sas', 'sa', 2018, 'January', 1, '', 'nkarner/noimg2.jpg ', 'male', 'sargis.mkrtchyan1.y@tumo.org', '121', 'asas', 'a'),
+(12, 'Sargis', 'Mkrtchyan', 2020, 'January', 1, '', 'nkarner/noimg2.jpg ', 'male', 'sargis.mkrtchyan1.m@gmail.com', '010000000', 'about me', '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `kinoner`
@@ -137,12 +177,24 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `kinoner`
 --
 ALTER TABLE `kinoner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
 --
--- AUTO_INCREMENT for table `usaers`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
