@@ -20,6 +20,7 @@ $a = $countFilms -  $page*$filmPage+$filmPage;
 				for ($i=$a-1; $i >$a-6 ; $i--) { 
 					$kino = new Kino($i,$db);
 					include "tpl/article.php";
+					$f++;
 				}
 			?>
 			

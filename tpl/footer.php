@@ -13,8 +13,8 @@
 					<?php } else{?>
 					
 					<form method="post" class="" action="tpl/login_check.php">
-						<input class="ffi" name="Lmail" type="text" placeholder="Email">
-						<input class="ffi" name="Lpass" type="password" placeholder="Passworld">
+						<input required class="ffi" name="Lmail" type="text" placeholder="Email">
+						<input required class="ffi" name="Lpass" type="password" placeholder="Passworld">
 						<input class="ffs" name="login" type="submit" value = "Log In">
 						<a href="reg.php" > <input class="ffsr" type="button" value="Register"></a>
 					</form>
@@ -30,6 +30,20 @@
 					<div id="cb"></div>
 			</div>
 		<script>
+
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";  
+		  }
+		  console.log(1)
+		  myIndex++;
+		  if (myIndex > x.length) {myIndex = 1}    
+		  x[myIndex-1].style.display = "block";  
+		  setTimeout(carousel, 2000); 
+		}
 		function left(){
 			var img  = document.getElementById("playerImg");
 			if(i>=9){

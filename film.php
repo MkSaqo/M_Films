@@ -104,16 +104,22 @@
 				<?php 
 					} ?>
 			</div>
-			<div class="player">
-				<button class="plLeft" onclick="left()">&#10094</button>
-				<button class="plRight" onclick="right()">&#10095</button>
-				<script>
-					var i = 0;
-					var images =
-					<?php echo "['".$kino->nkar1."','".$kino->nkar2."','".$kino->nkar3."','".$kino->nkar4."','".$kino->nkar5."','".$kino->nkar6."','".$kino->nkar7."','".$kino->nkar8."','".$kino->nkar9."','".$kino->nkar10."']";?>;
-				</script>
-				<img id="playerImg" src="<?php echo $kino->nkar1; ?>" width = "100%" height="500px" alt="">
+			<div class="player" >
+				  <img class="mySlides" src="<?php echo $kino->nkar1 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar2 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar3 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar4 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar5 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar6 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar7 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar8 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar9 ?>" width = "100%" height="500px">
+				  <img class="mySlides" src="<?php echo $kino->nkar10 ?>" width = "100%" height="500px">
 			</div>
+				<script type="text/javascript">
+					var myIndex = 0;
+					carousel();
+				</script>
 			<?php include "tpl/comments.php" ;
 				}else{
 					echo "<h2 class='nof'>No film selected</h2>";

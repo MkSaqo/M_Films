@@ -1,4 +1,4 @@
-<?php 
+<!-- <?php 
 	$id = $result["id"];
 	$name = $result["name"];
 	$desc = $result["desc"];
@@ -37,4 +37,4 @@
 	$nkar10 = $result["nkar10"];
 	$comm = $result["comments"];
 	$from = $result["from"];
- ?>
+ ?> -->

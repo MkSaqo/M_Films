@@ -17,7 +17,7 @@
 		<a href="film.php?id=<?php echo $kino->id; ?>"><h2 class="animate__animated "><?php echo $kino->name; ?></h2></a>
 		<div  class="index_s_r_1">
 		<?php
-		// $o++;
+	
 		$arr = [$kino->desc1,$kino->desc2,$kino->desc3,$kino->desc4];
 		for($m=0;$m<4;$m++){
 			$descArr = explode(":",$arr[$m]);

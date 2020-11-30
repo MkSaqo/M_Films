@@ -8,6 +8,22 @@ if (isset($_POST['login']) ) {
     if($_POST['Lmail'] && $_POST['Lpass']){
         $email = $_POST['Lmail'];
         $pass = $_POST['Lpass'];
+        $r = $conn->getLogin($email,$pass);
+        // pre($r);
+        // die();
+     }
+
+    if ($r){
+        $_SESSION['login'] = $r["email"];
+        $a = $conn->getName();
+        $_SESSION['name']= $a;
+
+    } 
+}
+if (isset($_GET['login']) ) {
+    if($_GET['Lmail'] && $_GET['Lpass']){
+        $email = $_GET['Lmail'];
+        $pass = $_GET['Lpass'];
         $r = $conn->getLogin($db,$email,$pass);
      }
 
