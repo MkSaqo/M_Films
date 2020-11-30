@@ -1,7 +1,9 @@
 <?php 
 include "functions.php";
 include "tpl/connect.php"; 
-
+require "class/Log.php";
+$newLog = new Log();
+$newLog->log("loooog");
 ?>
 <!DOCTYPE html>
 <html class="html_filmer1">
