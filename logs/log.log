@@ -32,3 +32,47 @@ PHPSESSID=2cn4tvncmmajoms2remqo6ev9m
 <address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
 
 webmaster@localhost
+
+-----NEW LOG----
+2020.12.01 01:02:50
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36
+/M_Films/index.php
+PHPSESSID=2cn4tvncmmajoms2remqo6ev9m
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
+
+-----NEW LOG----
+2020.12.01 01:03:52
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36
+1
+PHPSESSID=2cn4tvncmmajoms2remqo6ev9m
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
+
+-----NEW LOG----
+2020.12.01 01:05:42
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36
+/M_Films/index.php
+PHPSESSID=2cn4tvncmmajoms2remqo6ev9m
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
+
+-----NEW LOG----
+2020.12.01 01:07:12
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36
+localhost/M_Films/index.php
+PHPSESSID=2cn4tvncmmajoms2remqo6ev9m
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
