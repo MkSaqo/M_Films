@@ -32,18 +32,7 @@
 		<script>
 
 
-		function carousel() {
-		  var i;
-		  var x = document.getElementsByClassName("mySlides");
-		  for (i = 0; i < x.length; i++) {
-		    x[i].style.display = "none";  
-		  }
-		  console.log(1)
-		  myIndex++;
-		  if (myIndex > x.length) {myIndex = 1}    
-		  x[myIndex-1].style.display = "block";  
-		  setTimeout(carousel, 2000); 
-		}
+		
 		function left(){
 			var img  = document.getElementById("playerImg");
 			if(i>=9){
