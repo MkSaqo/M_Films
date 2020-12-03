@@ -4509,3 +4509,47 @@ PHPSESSID=ph6l8ufpkho8hjvj50be7ohpfk
 <address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
 
 webmaster@localhost
+
+-----NEW LOG----
+2020.12.04 01:43:44
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+localhost/M_Films/film.php
+PHPSESSID=ph6l8ufpkho8hjvj50be7ohpfk
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
+
+-----NEW LOG----
+2020.12.04 01:43:46
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+localhost/M_Films/home.php
+PHPSESSID=ph6l8ufpkho8hjvj50be7ohpfk
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
+
+-----NEW LOG----
+2020.12.04 01:43:49
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+localhost/M_Films/index.php
+PHPSESSID=ph6l8ufpkho8hjvj50be7ohpfk
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
+
+-----NEW LOG----
+2020.12.04 01:43:55
+Guest
+localhost
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+localhost/M_Films/cat.php
+PHPSESSID=ph6l8ufpkho8hjvj50be7ohpfk
+<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+
+webmaster@localhost
