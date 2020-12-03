@@ -1,18 +1,17 @@
 <?php 
-require_once 'Connection.php';
-class Kino extends Connection{
-	private $data;
+class Kino {
+	private $data,$db;
 	private $sql = "SELECT * FROM `kinoner` WHERE `id` =";
-	public function __construct($id,$db){
+	public function __construct($id){
 		$this->id = $id;
-		$this->data = $this->getData($id,$db);
+		$this->db = dbConnect();
+		$this->data = $this->getData($id);
 	}
-	public function getData($id,$db){
+	public function getData($id){
 		$sql = $this->sql.$id;
-		$conn = mysqli_query($db,$sql);
+		$conn = mysqli_query($this->db,$sql);
 		$result = mysqli_fetch_assoc($conn);
 		return $result;
-
 	}
 	public function getData1(){
 		return $this->data;

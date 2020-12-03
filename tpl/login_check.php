@@ -1,16 +1,12 @@
 <?php include "functions.php" ;
 require "../class/Login.php";
-$db = new Connection();
-$db =$db->connect();
 $link = $_SESSION['link'];
-        $conn = new Login();
+$conn = new Login();
 if (isset($_POST['login']) ) {
     if($_POST['Lmail'] && $_POST['Lpass']){
         $email = $_POST['Lmail'];
         $pass = $_POST['Lpass'];
         $r = $conn->getLogin($email,$pass);
-        // pre($r);
-        // die();
      }
 
     if ($r){
@@ -24,7 +20,7 @@ if (isset($_GET['login']) ) {
     if($_GET['Lmail'] && $_GET['Lpass']){
         $email = $_GET['Lmail'];
         $pass = $_GET['Lpass'];
-        $r = $conn->getLogin($db,$email,$pass);
+        $r = $conn->getLogin($email,$pass);
      }
 
     if ($r) $_SESSION['login'] = $r["email"];

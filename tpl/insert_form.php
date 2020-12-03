@@ -1,12 +1,6 @@
 <div class="insert">
     <h1>Welcome <?php echo $_SESSION['login']; ?></h1>
 <form method="post" enctype="multipart/form-data">
-    <?php 
-    // $sql = "SELECT * FROM `kinoner`";
-    // $r = mysqli_fetch_assoc(mysqli_query($db,$sql));
-    // pre($_FILES);
-    // pre($_POST);    
-    ?>
     <div class="insert_left">
         <span> name :</span><input required type="text" name="name"  placeholder="name"><br>
         <span> desc1 :</span><input type="text" name="desc1" placeholder="desc1" ><br>

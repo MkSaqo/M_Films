@@ -64,7 +64,7 @@ else if(isset($_POST["end"])){
 }
 else {
     ?>
-       <input type="email" name="email"><span>email registred</span><br>
+       <input type="email" required name="email"><span>email registred</span><br>
        <input type="submit" value="Send" name="login1" id="Rsubmit">
 
 <?php }?>

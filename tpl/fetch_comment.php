@@ -1,12 +1,9 @@
 <?php
 include "functions.php";
 require "../class/Comments.php";
-$db = new Connection();
-$db =$db->connect();
-
 $id = $_SESSION['comm_id'];
 $res = new Comments();
-$r = $res->getComent($db,$id);
+$r = $res->getComent($id);
 for ($i=0; $i <count($r) ; $i++) { 
  
 ?>

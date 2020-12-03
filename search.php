@@ -32,7 +32,7 @@
 			if(count($countFilms) != 0){
 				?>    <h2>Found <?php echo $countAllFilms; ?> matches for your query <span class="green"><?php echo $q; ?></span></h2><?php
         		while ($f < count($countFilms)) {
-				$kino = new Kino($countFilms[$f],$db);
+				$kino = new Kino($countFilms[$f]);
 					$f++;
 					$bool = true;
 					include "tpl/article.php";

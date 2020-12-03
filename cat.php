@@ -4,25 +4,16 @@
     $i = 0;
     $f = 0;
     $filmCount = 6;
-    if(isset($_GET["page"])) {
+    isset($_GET["page"]) ? $page= $_GET["page"] : $page= 1; 
     
-    $page= $_GET["page"];
-    } 
-    else{
-    
-    $page= 1;
-    } 
-    
+    $limit1=$page*$filmCount-$filmCount;
+    $limit2=$page*$filmCount;
     if(isset($_GET['Y'])){
         $page1 = $_GET['Y'];
         $why = "relase";
-        $limit1=$page*$filmCount-$filmCount;
-        $limit2=$page*$filmCount;
     }
     
     else if(isset($_GET['G'])){
-        $limit1=$page*$filmCount-$filmCount;
-        $limit2=$page*$filmCount;
         $page1 = $_GET['G'];
         $why = "genres";
     }
@@ -41,7 +32,7 @@
         if(isset($page)){
             ?><h2>Number of movies found: <?php echo($countFilms) ?></h2><?php
             while ($f < count($categoryCount)) {
-            $kino = new Kino($categoryCount[$f],$db);
+            $kino = new Kino($categoryCount[$f]);
                 if($kino){
                     include "tpl/article.php";
                     $f++;

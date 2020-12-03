@@ -1,9 +1,8 @@
 <?php 
-require_once 'Connection.php';
-class Register extends Connection{
-
+class Register {
+	private $db;
 	public function __construct(){
-		$this->db = $this->connect();
+		$this->db = dbConnect();
 	}
 
 	public function sendCode($email){

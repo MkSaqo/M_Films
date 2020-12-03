@@ -1,9 +1,9 @@
 <?php 
    include "tpl/header.php";
-
-   $a = $_GET["id"];
-   $kino = new Kino($a,$db);
+   $id = $_GET["id"];
+   $kino = new Kino($id);
    $getData1 = $kino->getData1();
+   
    ?>
 <div class="container1">
 	<div class="film_art">

@@ -1,9 +1,8 @@
  <?php 
 include "functions.php";
-include "tpl/connect.php";
-require "class/Log.php";
-
-// die();
+require "class/Kino.php";
+$db = dbConnect();
+addLog();
 ?>
 <!DOCTYPE html>
 <html class="html_filmer1">
@@ -20,7 +19,7 @@ require "class/Log.php";
 	</head>
 	<body>
 		<?php $a = (isset($_SESSION['login'])) ? $_SESSION['name'] : 'Guest';$_SESSION['name'] = $a;?>
-				<h1 class ='hello'>Welcom <?php echo $a?></h1>
+				<h1 class ='hello'>Welcome <?php echo $a?></h1>
 		<div id="vid-div">
 			<video id="_vidElement" class="video_all_screen" muted loop src="nkarner/best.mp4" type="video/mp4"></video>
 			<a href="#section02">
@@ -31,11 +30,6 @@ require "class/Log.php";
 				</div>
 			</a>
 		</div>
-			<?php 
-				$newLog = new Log();
-				$newLog->log("loooog");
-			 ?>
-
 		<script type="text/javascript">
 			var vid = document.getElementById('_vidElement');
 			$(document).ready(function(){

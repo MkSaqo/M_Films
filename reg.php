@@ -1,9 +1,9 @@
 <?php
 include "tpl/header.php";
-require "class/Register.php";
+require "class/Register.php"; 
 $month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 $dateY = date("Y");
-    $newUser = new Register();
+$newUser = new Register();
 
 if (isset($_SESSION["login"])) {
     header("Location: home.php");

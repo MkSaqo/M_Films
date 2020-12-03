@@ -47,7 +47,7 @@
 			if(gettype($genres)=="array" && array_key_exists($m,$genres)){
 				$result=Kino::getMiniFilms($db,$genres[$m]);
 				for ($i; $i <count($result) ; $i++) { 
-					$kino = new Kino($result[$i],$db);
+					$kino = new Kino($result[$i]);
 					$bool = true;
 					if($i<12){
 						for($j = 0;$j<count($arr);$j++){
@@ -79,7 +79,7 @@
 		}
 	}
 	while($i<15){
-		$kino = new Kino($i,$db);
+		$kino = new Kino($i);
 		$bool = true;
 		for($j = 0;$j<count($arr);$j++){
 			if($arr[$j]==$kino->id){

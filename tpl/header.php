@@ -1,9 +1,8 @@
 <?php 
 include "functions.php";
-include "tpl/connect.php"; 
-require "class/Log.php";
-$newLog = new Log();
-$newLog->log("loooog");
+require "class/Kino.php";
+$db = dbConnect();
+addLog();
 ?>
 <!DOCTYPE html>
 <html class="html_filmer1">
@@ -25,7 +24,7 @@ $newLog->log("loooog");
 					<?php
 					$i = 0;
 					while($i<7){
-						$kino = new Kino($i,$db);
+						$kino = new Kino($i);
 							?>
 						<div class="header_img"  onmouseover="a(<?php echo $i?>,'header_play','verjin_filmer_img',true)" 
 													onmouseout="a(<?php echo $i?>,'header_play','verjin_filmer_img',false)">
