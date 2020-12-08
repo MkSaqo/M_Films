@@ -57,7 +57,7 @@ class Register {
 		mail($rmail,$subject,$message,$headers);
 		mysqli_query($this->db,$sql);
 		$_POST = [];
-    	header("Location: tpl/login_check.php?Lmail=$rmail&Lpass=$rpass&login=a");
+    	header("Location: template/login_check.php?Lmail=$rmail&Lpass=$rpass&login=a");
 
 	}
 
