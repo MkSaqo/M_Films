@@ -1,6 +1,5 @@
 <?php
 include "../template/header2.php";
-// die();
 $filmPage = 6;
 if(isset($_GET['page'])) $page = $_GET['page'];
 else $page=1;

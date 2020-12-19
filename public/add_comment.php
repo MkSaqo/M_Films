@@ -1,5 +1,5 @@
  <?php
-include "functions.php";
+include "../template/functions.php";
 require "../class/Comments.php";
 $error = '';
 if(!empty($_POST["comment_content"])){

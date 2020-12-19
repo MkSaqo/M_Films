@@ -1,5 +1,5 @@
 <?php
-include "functions.php";
+include "../template/functions.php";
 require "../class/Comments.php";
 $id = $_SESSION['comm_id'];
 $res = new Comments();

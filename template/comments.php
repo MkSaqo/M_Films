@@ -10,7 +10,6 @@
 </div>
     <script>
 $(document).ready(function(){
- 
  $('#comment_form').on('submit', function(event){
 
   <?php $_SESSION["comm_id"]=$_GET['id']; ?>
@@ -21,7 +20,7 @@ $(document).ready(function(){
 
   var form_data = $(this).serialize();
   $.ajax({
-   url:"template/add_comment.php",
+   url:"add_comment.php",
    method:"POST",
    data:form_data,
    dataType:"JSON",
@@ -40,7 +39,7 @@ $(document).ready(function(){
 
  function load_comment(){
   $.ajax({
-   url:"template/fetch_comment.php",
+   url:"fetch_comment.php",
    method:"POST",
    success:function(data){
     $('#display_comment').html(data);
