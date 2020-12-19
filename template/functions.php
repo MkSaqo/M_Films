@@ -34,10 +34,10 @@ function addLog(){
     fwrite($file, $message);
     fclose($file);
 }
-function error_found(){
-    header("Location: 404.php");
-  }
-set_error_handler('error_found');
-header('X-XSS-Protection:0');
+// function error_found(){
+//     header("Location: 404.php");
+//   }
+// set_error_handler('error_found');
+// header('X-XSS-Protection:0');
 
 ?>

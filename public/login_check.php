@@ -1,4 +1,5 @@
-<?php include "../template/functions.php" ;
+<?php 
+include "../template/functions.php" ;
 require "../class/Login.php";
 $link = $_SESSION['link'];
 $conn = new Login();
